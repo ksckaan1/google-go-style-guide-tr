@@ -11,8 +11,6 @@ https://google.github.io/styleguide/go/guide
 
 -->
 
-{% raw %}
-
 **Not:** Bu, Google'daki [Go Stili](index)'ni özetleyen belgeler dizisinin bir
 parçasıdır. Bu belge **[normatif](index#normative) ve
 [kanonik](index#canonical)**'dir. Daha fazla bilgi için [genel bakışa](index#about) bakınız.
@@ -469,5 +467,3 @@ kötüleştirmeyen bir alternatif bulması uygundur.
 <!--
 
 -->
-
-{% endraw %}

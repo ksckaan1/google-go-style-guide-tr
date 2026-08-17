@@ -11,14 +11,10 @@ https://google.github.io/styleguide/go/best-practices
 
 -->
 
-{% raw %}
-
 **Not:** Bu, Google'da [Go Stili](index)'ni özetleyen belge serisinin bir
 parçasıdır. Bu belge ne [normatif](index#normative) ne de
 [kanonik](index#canonical)dir ve [ana stil kılavuzu](guide)'na yardımcı bir
 belgedir. Daha fazla bilgi için [gözden geçirmeye](index#about) bakın.
-
-<a id="about"></a>
 
 ## Hakkında
 
@@ -31,15 +27,9 @@ alınmaktadır.
 
 Tüm Stil Kılavuzu belgeleri için [gözden geçirmeye](index#about) bakın.
 
-<a id="naming"></a>
-
 ## İsimlendirme
 
-<a id="function-names"></a>
-
 ### Fonksiyon ve metod isimleri
-
-<a id="function-name-repetition"></a>
 
 #### Tekrardan kaçının
 
@@ -115,8 +105,6 @@ func (c *Config) WriteTextTo(w io.Writer) (int64, error)
 func (c *Config) WriteBinaryTo(w io.Writer) (int64, error)
 ```
 
-<a id="function-name-conventions"></a>
-
 #### İsimlendirme kuralları
 
 Fonksiyon ve metod isimleri seçerken bazı diğer yaygın kurallar vardır:
@@ -162,8 +150,6 @@ Fonksiyon ve metod isimleri seçerken bazı diğer yaygın kurallar vardır:
   func (c *Config) MarshalText() (string, error)
   ```
 
-<a id="naming-doubles"></a>
-
 ### Test double ve yardımcı paketleri
 
 Test yardımcılarını ve özellikle [test double]'ları sağlayan paket ve türleri
@@ -206,8 +192,6 @@ type Service struct {
 func (s *Service) Charge(c *Card, amount money.Money) error { /* atlandı */ }
 ```
 
-<a id="naming-doubles-helper-package"></a>
-
 #### Yardımcı test paketleri oluşturma
 
 Başka bir paket için test double'ları içeren bir paket oluşturmak
@@ -226,15 +210,13 @@ package creditcardtest
 Aşağıdaki bölümlerde açıkça belirtilmediği sürece, tüm örnekler
 `package creditcardtest` içindedir.
 
-<a id="naming-doubles-simple"></a>
-
 #### Basit durum
 
 `Service` için bir grup test double eklemek istiyorsunuz. `Card`, bir Protocol
 Buffer mesajına benzer şekilde etkin olarak basit bir veri türü olduğundan,
 testlerde özel bir işleme gerek yoktur, dolayısıyla bir double'a gerek
 yoktur. Yalnızca bir tür (örneğin `Service`) için test double'ları
- öngörüyorsanız, double'ları isimlendirmede kısa bir yaklaşım
+öngörüyorsanız, double'ları isimlendirmede kısa bir yaklaşım
 kullanabilirsiniz:
 
 ```go
@@ -277,8 +259,6 @@ Ayrıca bakın:
 
 - [Go İpucu #42: Test İçin Stub Oluşturma](https://google.github.io/styleguide/go/index.html#gotip)
 
-<a id="naming-doubles-multiple-behaviors"></a>
-
 #### Çoklu test double davranışları
 
 Bir stub türü yeterli olmadığında (örneğin, her zaman başarısız olan bir
@@ -301,8 +281,6 @@ func (AlwaysDeclines) Charge(*creditcard.Card, money.Money) error {
     return creditcard.ErrDeclined
 }
 ```
-
-<a id="naming-doubles-multiple-types"></a>
 
 #### Çoklu türler için çoklu double'lar
 
@@ -344,8 +322,6 @@ type StubStoredValue struct{}
 
 func (StubStoredValue) Credit(*creditcard.Card, money.Money) error { return nil }
 ```
-
-<a id="naming-doubles-local-variables"></a>
 
 #### Testlerdeki yerel değişkenler
 
@@ -434,8 +410,6 @@ func TestProcessor(t *testing.T) {
     }
 }
 ```
-
-<a id="shadowing"></a>
 
 ### Gölgeleme
 
@@ -544,8 +518,6 @@ func LongFunction() {
 
 [kısa değişken tanımlamaları]: https://go.dev/ref/spec#Short_variable_declarations
 
-<a id="util-packages"></a>
-
 ### Yardımcı paketler
 
 Go paketlerinin `package` bildiriminde belirtilen, import yolundan ayrı bir
@@ -580,8 +552,6 @@ _, err := f.Seek(0, common.SeekStart)
 
 b := helper.Marshal(curve, x, y)
 ```
-
-<a id="package-size"></a>
 
 ## Paket boyutu
 
@@ -639,7 +609,7 @@ Bu fikirleri eylemde göstermeye yardımcı olacak birkaç kanonik olmayan
 örnek:
 
 - Tek bir tutarlı fikir içeren ve daha fazla eklenmeye veya çıkarılmaya
-değer görülmeyen küçük paketler:
+  değer görülmeyen küçük paketler:
 
   - [Paket `csv`][package `csv`]: CSV veri kodlama ve kod çözümü, sorumluluk
     sırasıyla [reader.go] ve [writer.go] arasında bölünmüştür.
@@ -647,7 +617,7 @@ değer görülmeyen küçük paketler:
     beyaz kutu program telemetrisi.
 
 - Tek bir büyük alanı ve birden fazla sorumluluğunu birlikte içeren
-orta boy paketler:
+  orta boy paketler:
 
   - [Paket `flag`][package `flag`]: Tümü [flag.go] içinde yer alan
     komut satırı flag yönetimi.
@@ -689,11 +659,7 @@ Ayrıca bakın:
 [file.go]: https://go.googlesource.com/go/+/refs/heads/master/src/os/file.go
 [tempfile.go]: https://go.googlesource.com/go/+/refs/heads/master/src/os/tempfile.go
 
-<a id="imports"></a>
-
 ## Importlar
-
-<a id="import-protos"></a>
 
 ### Protocol Buffer Mesajları ve Stub'ları
 
@@ -731,13 +697,9 @@ teşvik ediyordu. Yeni kod daha açıklayıcı isimleri tercih etmelidir. Kısa
 isimler kullanan mevcut kod örnek olarak kullanılmamalıdır, ancak
 değiştirilmesi gerekmez.
 
-<a id="import-order"></a>
-
 ### Import sıralaması
 
 [Go Stil Kararları: Import gruplandırma](decisions.md#import-grouping)'a bakın.
-
-<a id="error-handling"></a>
 
 ## Hata yönetimi
 
@@ -781,8 +743,6 @@ Ayrıca bakın:
 - [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](https://google.github.io/styleguide/go/index.html#gotip)
 - [Goİpucu #48: Hata Beklenen Değerleri](https://google.github.io/styleguide/go/index.html#gotip)
 - [Goİpucu #13: Kontrol İçin Hataları Tasarlama](https://google.github.io/styleguide/go/index.html#gotip)
-
-<a id="error-structure"></a>
 
 ### Hata yapısı
 
@@ -885,8 +845,6 @@ bakın.
 [`package cmp`]: https://pkg.go.dev/github.com/google/go-cmp/cmp
 [status]: https://pkg.go.dev/google.golang.org/grpc/status
 [canonical codes]: https://pkg.go.dev/google.golang.org/grpc/codes
-
-<a id="error-extra-info"></a>
 
 ### Hatalara bilgi ekleme
 
@@ -1010,10 +968,12 @@ insanlar veya kod olsun.
         }
       }
       ```
-         if err != nil {
-          return fmt.Errorf("couldn't find remote file: %w", err)
-        }
+
+      if err != nil {
+      return fmt.Errorf("couldn't find remote file: %w", err)
       }
+      }
+
       ```
 
       Bu, daha üst düzey bir fonksiyonun temel hata `fs.ErrNotExist` olsa bile,
@@ -1027,6 +987,8 @@ insanlar veya kod olsun.
       iç dosya sistemi hatasıyla ilgilenmez; kanonik sonuçla (örn., `Internal`,
       `NotFound`, `PermissionDenied`) ilgilenir.
 
+      ```
+
     - Temel hataları açıkça belgelendiğinde ve test edildiğinde:
       Paketinizin API'si某些 temel hataların sarılabileceğini ve çağrıcılar
       tarafından kontrol edilebileceğini garanti ediyorsa (örn., "bu fonksiyon
@@ -1037,8 +999,6 @@ Ayrıca bakınız:
 
 - [Hata Dokümantasyonu Sözleşmeleri](#documentation-conventions-errors)
 - [Hata sarmalama hakkında blog yazısı](https://blog.golang.org/go1.13-errors)
-
-<a id="error-percent-w"></a>
 
 ### Hatalarda %w yerleştirme
 
@@ -1052,7 +1012,7 @@ içine yerleştirilerek sarılabilir (örn:
 [`fs.PathError`](https://pkg.go.dev/io/fs#PathError)).
 
 Sarılmış hatalar hata zincirleri oluşturur: her yeni sarama katmanı hata
- zincirinin başına yeni bir giriş ekler. Hata zinciri `Unwrap() error` metoduyla
+zincirinin başına yeni bir giriş ekler. Hata zinciri `Unwrap() error` metoduyla
 dolaşılabilir. Örneğin:
 
 ```go
@@ -1070,11 +1030,11 @@ flowchart LR
 ```
 
 `%w` fiili nereye yerleştirilirse yerleştirilsin, döndürülen hata her zaman hata
- zincirinin başını temsil eder ve `%w` bir sonraki child'dır. Benzer şekilde,
+zincirinin başını temsil eder ve `%w` bir sonraki child'dır. Benzer şekilde,
 `Unwrap() error` her zaman hata zincirini en yeniden en eskiye doğru dolaşır.
 
 Ancak `%w` fiilinin yerleştirilmesi, hata zincirinin en yeniden en eskiye, en
- eskiyen en yeniye, ya da hiçbiri olmayacak şekilde yazdırılıp yazdırılmayacağını
+eskiyen en yeniye, ya da hiçbiri olmayacak şekilde yazdırılıp yazdırılmayacağını
 etkiler:
 
 ```go
@@ -1108,8 +1068,6 @@ fmt.Println(err3) // err3-1 err2-1 err1 err2-2 err3-2
 
 Bu nedenle, hata metninin hata zinciri yapısını yansıtması için `%w` fiilini
 `[...]: %w` formunda sona yerleştirmeyi tercih edin.
-
-<a id="error-percent-w-sentinel-placement"></a>
 
 #### Sentinel hata yerleşimi
 
@@ -2903,8 +2861,8 @@ testleri çıkarmış olursunuz. Bu genellikle yalnızca [fonksiyonel testler]
 için kullanılır.
 
 Özel bir `TestMain` kullanmak, doğru kullanım için gerekli dikkat miktarı
-nedeniyle **ilk tercihiniz olmamalıdır**. Öncelikle [*yaygın test kurulumunu
-yayma*] bölümündeki çözümün veya normal bir [test yardımcısının]
+nedeniyle **ilk tercihiniz olmamalıdır**. Öncelikle [_yaygın test kurulumunu
+yayma_] bölümündeki çözümün veya normal bir [test yardımcısının]
 ihtiyaçlarınızı karşılayıp karşılamadığını değerlendirin.
 
 [custom testmain entrypoint]: https://golang.org/pkg/testing/#hdr-Main
@@ -3074,8 +3032,8 @@ bad := src.String() + " [" + qos.String() + ":" + strconv.Itoa(mtu) + "]-> " + d
 ```
 
 **En İyi Uygulama:** Dize oluşturma işleminin çıktısı bir `io.Writer` ise,
- Writer'a göndermek için `fmt.Sprintf` ile geçici bir dize oluşturmayın.
- Bunun yerine, Writer'a doğrudan yazmak için `fmt.Fprintf` kullanın.
+Writer'a göndermek için `fmt.Sprintf` ile geçici bir dize oluşturmayın.
+Bunun yerine, Writer'a doğrudan yazmak için `fmt.Fprintf` kullanın.
 
 Biçimlendirme daha da karmaşık olduğunda, uygun olarak [`text/template`] veya
 [`safehtml/template`] tercih edin.
@@ -3129,10 +3087,6 @@ usage := "" +
 <!--
 
 -->
-
-{% endraw %}
-
-<a id="globals"></a>
 
 ## Küresel durum
 
@@ -3274,7 +3228,7 @@ sorunlar yaratır:
   aşamalarda `Register` çağrılabilir ve çağrılamaz?
 
   `Register` yanlış zamanda çağrılırsa ne olur? Bir müşteri [`func
-  init`](https://go.dev/ref/spec#Package_initialization) içinde, bayraklar
+init`](https://go.dev/ref/spec#Package_initialization) içinde, bayraklar
   ayrıştırılmadan önce veya `main`'den sonra `Register` çağırabilir. Bir
   fonksiyonun çağrıldığı aşama hata yönetimini etkiler. Bir API yazarı, API'nin
   _yalnızca_ program başlatma sırasında çağrıldığını varsayarsa, bu varsayım

@@ -11,8 +11,6 @@ https://google.github.io/styleguide/go/decisions
 
 -->
 
-{% raw %}
-
 **Not:** Bu belge, Google'daki [Go Stili](index)'ni özetleyen belge serisinin bir
 parçasıdır. Bu belge **[normatif](index#normative) ancak
 [kanonik](index#canonical) değildir** ve [ana stil kılavuzu](guide)'na tabidir.
@@ -146,7 +144,7 @@ Ayrıca bakın: [Paket isimleri hakkında Go blog yazısı](https://go.dev/blog/
 - O tür için her alıcıya tutarlı olarak uygulanmalı
 - Alt çizgi olmamalı; kullanılmıyorsa isim atlanmalıdır
 
-| Uzun İsim                   | Daha İyi İsim               |
+| Uzun İsim                   | Daha İyi İsim             |
 | --------------------------- | ------------------------- |
 | `func (tray Tray)`          | `func (t Tray)`           |
 | `func (info *ResearchInfo)` | `func (ri *ResearchInfo)` |
@@ -227,21 +225,21 @@ kullanımlarına benzer şekilde büyük harfle yazılmalıdır.
 
 <!-- Keep this table narrow. If it must grow wider, replace with a list. -->
 
-| İngilizce Kullanım | Kapsam      | Doğru    | Yanlış                                  |
-| ------------- | ---------- | -------- | -------------------------------------- |
-| XML API       | Dışa açık   | `XMLAPI` | `XmlApi`, `XMLApi`, `XmlAPI`, `XMLapi` |
-| XML API       | Dışa kapalı | `xmlAPI` | `xmlapi`, `xmlApi`                     |
-| iOS           | Dışa açık   | `IOS`    | `Ios`, `IoS`                           |
-| iOS           | Dışa kapalı | `iOS`    | `ios`                                  |
-| gRPC          | Dışa açık   | `GRPC`   | `Grpc`                                 |
-| gRPC          | Dışa kapalı | `gRPC`   | `grpc`                                 |
-| DDoS          | Dışa açık   | `DDoS`   | `DDOS`, `Ddos`                         |
-| DDoS          | Dışa kapalı | `ddos`   | `dDoS`, `dDOS`                         |
-| ID            | Dışa açık   | `ID`     | `Id`                                   |
-| ID            | Dışa kapalı | `id`     | `iD`                                   |
-| DB            | Dışa açık   | `DB`     | `Db`                                   |
-| DB            | Dışa kapalı | `db`     | `dB`                                   |
-| Txn           | Dışa açık   | `Txn`    | `TXN`                                  |
+| İngilizce Kullanım | Kapsam      | Doğru    | Yanlış                                 |
+| ------------------ | ----------- | -------- | -------------------------------------- |
+| XML API            | Dışa açık   | `XMLAPI` | `XmlApi`, `XMLApi`, `XmlAPI`, `XMLapi` |
+| XML API            | Dışa kapalı | `xmlAPI` | `xmlapi`, `xmlApi`                     |
+| iOS                | Dışa açık   | `IOS`    | `Ios`, `IoS`                           |
+| iOS                | Dışa kapalı | `iOS`    | `ios`                                  |
+| gRPC               | Dışa açık   | `GRPC`   | `Grpc`                                 |
+| gRPC               | Dışa kapalı | `gRPC`   | `grpc`                                 |
+| DDoS               | Dışa açık   | `DDoS`   | `DDOS`, `Ddos`                         |
+| DDoS               | Dışa kapalı | `ddos`   | `dDoS`, `dDOS`                         |
+| ID                 | Dışa açık   | `ID`     | `Id`                                   |
+| ID                 | Dışa kapalı | `id`     | `iD`                                   |
+| DB                 | Dışa açık   | `DB`     | `Db`                                   |
+| DB                 | Dışa kapalı | `db`     | `dB`                                   |
+| Txn                | Dışa açık   | `Txn`    | `TXN`                                  |
 
 <!--#include file="/go/g3doc/style/includes/special-name-exception.md"-->
 
@@ -401,7 +399,7 @@ de bir değişkenin türü onun nasıl kullanıldığından nettir. Yalnızca bi
 değişkenin değeri aynı kapsamda iki kez göründüğünde türünü netleştirmek
 gereklidir.
 
-| Tekrarlayıcı İsim             | Daha İyi İsim            |
+| Tekrarlayıcı İsim             | Daha İyi İsim          |
 | ----------------------------- | ---------------------- |
 | `var numUsers int`            | `var users int`        |
 | `var nameString string`       | `var name string`      |
@@ -3724,5 +3722,3 @@ isterse dahili mesaj panolarında.
 <!--
 
 -->
-
-{% endraw %}
