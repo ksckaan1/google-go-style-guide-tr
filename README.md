@@ -9,16 +9,14 @@ https://google.github.io/styleguide/go
 
 -->
 
-{% raw %}
-
 <a id="about"></a>
 
 ## Hakkında
 
 Go Stil Kılavuzu ve ilişik dokümanlar, okunabilir ve idiomatik Go kodu yazmak için geçerli en iyi yaklaşımları belgelemektedir. Stil Kılavuzu'na mutlak olarak uyulması amaçlanmamakta ve bu dokümanlar asla kapsamlı olmayacaktır. Amacımız, dilin yeni kullanıcılarının yaygın hatalardan kaçınabilmesi için okunabilir Go yazma konusundaki tahminleri en aza indirmektir. Stil Kılavuzu ayrıca Google'da Go kodu gözden geçiren herkesin verdiği stil önerilerini birleştirmek için de kullanılır.
 
-| Doküman                | Bağlantı                                              | Ana Kitle                | [Normatif] | [Kanonical] |
-| ---------------------- | ----------------------------------------------------- | ------------------------ | ---------- | ----------- |
+| Doküman                | Bağlantı       | Ana Kitle                | [Normatif] | [Kanonical] |
+| ---------------------- | -------------- | ------------------------ | ---------- | ----------- |
 | **Stil Kılavuzu**      | guide          | Herkes                   | Evet       | Evet        |
 | **Stil Kararları**     | decisions      | Okunabilirlik Mentörleri | Evet       | Hayır       |
 | **En İyi Uygulamalar** | best-practices | İlgilenen herkes         | Hayır      | Hayır       |
@@ -133,5 +131,3 @@ Aşağıda, Go stili hakkında kendi kendini eğitmek isteyenler ve incelemeleri
 <!--
 
 -->
-
-{% endraw %}
