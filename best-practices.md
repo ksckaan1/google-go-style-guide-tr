@@ -4,17 +4,17 @@
 
 best-practices
 
-[Gözden geçirme](index.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
+[Gözden geçirme](README.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
 [En iyi uygulamalar](best-practices.md)
 
 <!--
 
 -->
 
-**Not:** Bu, Google'da [Go Stili](index.md)'ni özetleyen belge serisinin bir
-parçasıdır. Bu belge ne [normatif](index.md#normative) ne de
-[kanonik](index.md#canonical)dir ve [ana stil kılavuzu](guide.md)'na yardımcı bir
-belgedir. Daha fazla bilgi için [gözden geçirmeye](index.md#about) bakın.
+**Not:** Bu, Google'da [Go Stili](README.md)'ni özetleyen belge serisinin bir
+parçasıdır. Bu belge ne [normatif](README.md#normative) ne de
+[kanonik](README.md#canonical)dir ve [ana stil kılavuzu](guide.md)'na yardımcı bir
+belgedir. Daha fazla bilgi için [gözden geçirmeye](README.md#about) bakın.
 
 ## Hakkında
 
@@ -25,7 +25,7 @@ olduğunda, ne zaman uygulanacağı ve ne zaman uygulanmayacağına ilişkin kar
 ilişkin hususlar da dahil olmak üzere birden fazla alternatif yaklaşım ele
 alınmaktadır.
 
-Tüm Stil Kılavuzu belgeleri için [gözden geçirmeye](index.md#about) bakın.
+Tüm Stil Kılavuzu belgeleri için [gözden geçirmeye](README.md#about) bakın.
 
 ## İsimlendirme
 
@@ -257,7 +257,7 @@ Yukarıdaki yaklaşım gelenekseldir ve diğer mühendisler tarafından makul
 
 Ayrıca bakın:
 
-- [Go İpucu #42: Test İçin Stub Oluşturma](index.md#gotip)
+- [Go İpucu #42: Test İçin Stub Oluşturma](README.md#gotip)
 
 #### Çoklu test double davranışları
 
@@ -740,9 +740,9 @@ Ayrıca bakın:
 - [Go Blog'dan hatalar hakkında bir yazı](https://go.dev/blog/go1.13-errors)
 - [Paket `errors`](https://pkg.go.dev/errors)
 - [Paket `upspin.io/errors`](https://commandcenter.blogspot.com/2017/12/error-handling-in-upspin.html)
-- [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index.md#gotip)
-- [Goİpucu #48: Hata Beklenen Değerleri](index.md#gotip)
-- [Goİpucu #13: Kontrol İçin Hataları Tasarlama](index.md#gotip)
+- [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](README.md#gotip)
+- [Goİpucu #48: Hata Beklenen Değerleri](README.md#gotip)
+- [Goİpucu #13: Kontrol İçin Hataları Tasarlama](README.md#gotip)
 
 ### Hata yapısı
 
@@ -814,7 +814,7 @@ func handlePet(...) {
 ```
 
 Hataları dize biçimlerine göre ayırt etmeye çalışmayın. (Daha fazla bilgi için
-[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index.md#gotip)
+[Go İpucu #13: Kontrol İçin Hataları Tasarlama](README.md#gotip)
 adlı makaleye bakın.)
 
 ```go
@@ -836,7 +836,7 @@ detay dizesi içeren bir proje yapısı. [Paket `status`][status] yaygın bir
 kapsamalamadır; bu yaklaşımı seçerseniz (bunu yapmak zorunda değilsiniz),
 [kanonik kodları](decisions.md#canonical-codes) kullanın. Durum kodlarını
 kullanmanın doğru seçim olup olmadığını öğrenmek için
-[Go İpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index.md#gotip)'a
+[Go İpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](README.md#gotip)'a
 bakın.
 
 [`os.PathError`]: https://pkg.go.dev/os#PathError
@@ -1007,7 +1007,7 @@ Fiilini kullanacaksanız, `%w`'yi hata dizgesinin sonuna yerleştirmeyi tercih
 edin.
 
 Hatalar `%w` fiili ile veya `Unwrap() error` arayüzünü uygulayan bir
-[yapılandırılmış hata](index.md#gotip)
+[yapılandırılmış hata](README.md#gotip)
 içine yerleştirilerek sarılabilir (örn:
 [`fs.PathError`](https://pkg.go.dev/io/fs#PathError)).
 
@@ -1133,8 +1133,8 @@ Ayrıca bakınız:
 - [Go Tip #106: Hata İsimlendirme Sözleşmeleri]
 
 [commentary]: decisions.md#commentary
-[Go Tip #48: Error Sentinel Values]: index.md#gotip
-[Go Tip #106: Error Naming Conventions]: index.md#gotip
+[Go Tip #48: Error Sentinel Values]: README.md#gotip
+[Go Tip #106: Error Naming Conventions]: README.md#gotip
 
 <a id="error-logging"></a>
 
@@ -1349,7 +1349,7 @@ Ayrıca bakınız:
 - [Defer, Panic ve Recover](https://go.dev/blog/defer-panic-and-recover)
 - [Go'da panic'lerin kullanımı ve yanlış kullanımı hakkında](https://eli.thegreenplace.net/2018/on-the-uses-and-misuses-of-panics-in-go/)
 
-[Go Tip #81: Avoiding Resource Leaks in API Design]: index.md#gotip
+[Go Tip #81: Avoiding Resource Leaks in API Design]: README.md#gotip
 
 <a id="documentation"></a>
 
@@ -1421,8 +1421,8 @@ Ayrıca bakınız:
 - [GoTip #51: Yapılandırma Desenleri]
 
 [commentary]: decisions.md#commentary
-[GoTip #41: Identify Function Call Parameters]: index.md#gotip
-[GoTip #51: Patterns for Configuration]: index.md#gotip
+[GoTip #41: Identify Function Call Parameters]: README.md#gotip
+[GoTip #51: Patterns for Configuration]: README.md#gotip
 
 <a id="documentation-conventions-contexts"></a>
 
@@ -1631,7 +1631,7 @@ Ayrıca bakınız:
 
 - [GoTip #110: Exit'i Defer ile Karıştırmayın]
 
-[GoTip #110: Don't Mix Exit With Defer]: index.md#gotip
+[GoTip #110: Don't Mix Exit With Defer]: README.md#gotip
 
 <a id="documentation-conventions-errors"></a>
 
@@ -1701,8 +1701,8 @@ eklemeler yapmasını önleyebilir.
 
 Ayrıca bakınız:
 
-- [Go Tip #106: Hata İsimlendirme Sözleşmeleri](index.md#gotip)
-- [Go Tip #89: Kanonik Durum Kodlarının Ne Zaman Hata Olarak Kullanılacağı](index.md#gotip)
+- [Go Tip #106: Hata İsimlendirme Sözleşmeleri](README.md#gotip)
+- [Go Tip #89: Kanonik Durum Kodlarının Ne Zaman Hata Olarak Kullanılacağı](README.md#gotip)
 
 <a id="documentation-preview"></a>
 
@@ -2021,7 +2021,7 @@ Boyut ipuçları ve önceden ayırma, **kodun ve entegrasyonlarının empirik an
 
 **Uyarı:** İhtiyacınız olandan daha fazla bellek ayırmak, fleet'te belleği boşa harcayabilir ve hatta performansı olumsuz etkileyebilir. Emin değilseniz, [GoTip #3: Benchmarking Go Code]'a bakın ve varsayılan olarak [sıfır başlatma](#vardeclzero) veya [birleşik literal bildirimi](#vardeclcomposite) kullanın.
 
-[GoTip #3: Benchmarking Go Code]: index.md#gotip
+[GoTip #3: Benchmarking Go Code]: README.md#gotip
 
 <a id="decl-chan"></a>
 
@@ -2073,7 +2073,7 @@ Bir fonksiyonun birçok girdiye ihtiyaç duyduğu durumlarda, bazı argümanlar 
 Aşağıdaki öneriler öncelikle dışa aktarılan API'ler için geçerlidir ve bunlar dışa aktarılmamış olanlardan daha yüksek bir standartla değerlendirilir. Bu teknikler sizin kullanım durumunuz için gereksiz olabilir. Kendoze güvenin ve [açıklık][clarity] ile [en az mekanizma][least mechanism] ilkelerini dengeleyin.
 
 Ayrıca bakın:
-[Go Tip #24: Use Case-Specific Constructions](index.md#gotip)
+[Go Tip #24: Use Case-Specific Constructions](README.md#gotip)
 
 [option struct]: #option-structure
 [variadic options]: #variadic-options
@@ -2527,9 +2527,9 @@ func TestAcceptance(t *testing.T) {
 }
 ```
 
-[sentinels]: index.md#gotip
-[custom types]: index.md#gotip
-[aggregates errors]: index.md#gotip
+[sentinels]: README.md#gotip
+[custom types]: README.md#gotip
+[aggregates errors]: README.md#gotip
 
 <a id="use-real-transports"></a>
 
@@ -2606,7 +2606,7 @@ func addGameAssets(t *testing.T, dir string) error {
 
 Hata mesajı, ne olduğunu açıklayan bir açıklama içermelidir. Bu önemlidir, çünkü özellikle yardımımda hata üreten adım sayısı arttıkça birçok kullanıcıya bir test API'si sağlıyor olabilirsiniz. Test başarısız olduğunda, kullanıcının nerede ve neden başarısız olduğunu bilmesi gerekir.
 
-**İpucu:** Go 1.14, testiniz tamamlandığında çalışan temizleme fonksiyonlarını kaydetmek için kullanılabilecek bir [`t.Cleanup`] fonksiyonu tanıttı. Fonksiyon aynı zamanda test yardımcılarıyla da çalışır. Test yardımcılarını basitleştirme rehberliği için [GoTip #4: Cleaning Up Your Tests](index.md#gotip) sayfasına bakın.
+**İpucu:** Go 1.14, testiniz tamamlandığında çalışan temizleme fonksiyonlarını kaydetmek için kullanılabilecek bir [`t.Cleanup`] fonksiyonu tanıttı. Fonksiyon aynı zamanda test yardımcılarıyla da çalışır. Test yardımcılarını basitleştirme rehberliği için [GoTip #4: Cleaning Up Your Tests](README.md#gotip) sayfasına bakın.
 
 Aşağıdaki snippet, hayali bir `paint_test.go` dosyasında, `(*testing.T).Helper`'ın bir Go testinde hata raporlamayı nasıl etkilediğini göstermektedir:
 
@@ -3060,7 +3060,7 @@ str := b.String()
 ```
 
 **Not:** Daha fazla tartışma için
-[GoTip #29: Building Strings Efficiently](index.md#gotip) adresine bakın.
+[GoTip #29: Building Strings Efficiently](README.md#gotip) adresine bakın.
 
 <a id="string-constants"></a>
 
@@ -3135,12 +3135,12 @@ alanlarına parametre olarak geçirmektir.
 
 Ayrıca bakın:
 
-- [Go Tip #5: Slimming Your Client Libraries](index.md#gotip)
-- [Go Tip #24: Use Case-Specific Constructions](index.md#gotip)
-- [Go Tip #40: Improving Time Testability with Function Parameters](index.md#gotip)
-- [Go Tip #41: Identify Function Call Parameters](index.md#gotip)
-- [Go Tip #44: Improving Time Testability with Struct Fields](index.md#gotip)
-- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
+- [Go Tip #5: Slimming Your Client Libraries](README.md#gotip)
+- [Go Tip #24: Use Case-Specific Constructions](README.md#gotip)
+- [Go Tip #40: Improving Time Testability with Function Parameters](README.md#gotip)
+- [Go Tip #41: Identify Function Call Parameters](README.md#gotip)
+- [Go Tip #44: Improving Time Testability with Struct Fields](README.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](README.md#gotip)
 
 Açık bağımlılık geçişini desteklemeyen API'ler, müşteri sayısı arttıkça
 kırılgan hale gelir:
@@ -3242,9 +3242,9 @@ init`](https://go.dev/ref/spec#Package_initialization) içinde, bayraklar
 
 Ayrıca bakın:
 
-- [Go Tip #36: Enclosing Package-Level State](index.md#gotip)
-- [Go Tip #71: Reducing Parallel Test Flakiness](index.md#gotip)
-- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
+- [Go Tip #36: Enclosing Package-Level State](README.md#gotip)
+- [Go Tip #71: Reducing Parallel Test Flakiness](README.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](README.md#gotip)
 - Hata Yönetimi:
   [Look Before You Leap](https://docs.python.org/3/glossary.html#term-LBYL)
   versus
@@ -3258,7 +3258,7 @@ etkileri vardır. Küresel durumla **son derece dikkatli** yaklaşılmalıdır.
 [Küresel durum birkaç şekilde ortaya çıkar](#globals-forms) ve ne zaman güvenli
 olduğunu belirlemek için birkaç [test sorusu kullanabilirsiniz](#globals-litmus-tests).
 
-[Unit Testing Practices on Public APIs]: index.md#unit-testing-practices
+[Unit Testing Practices on Public APIs]: README.md#unit-testing-practices
 
 <a id="globals-forms"></a>
 
@@ -3436,8 +3436,8 @@ izleyin:
 
 Ayrıca bakın:
 
-- [Go Tip #36: Enclosing Package-Level State](index.md#gotip)
-- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
+- [Go Tip #36: Enclosing Package-Level State](README.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](README.md#gotip)
 
 <a id="interfaces"></a>
 
@@ -3765,8 +3765,8 @@ Arayüz döndürmenin idiomatik seçim olduğu birkaç yaygın senaryo vardır:
     paketler, kendi başlarına ayakta duramayan çok sayıda çok küçük paketten
     genellikle tercih edilir.
 
-[GoTip #78: Minimal Viable Interfaces]: index.md#gotip
-[GoTip #49: Accept Interfaces, Return Concrete Types]: index.md#gotip
+[GoTip #78: Minimal Viable Interfaces]: README.md#gotip
+[GoTip #49: Accept Interfaces, Return Concrete Types]: README.md#gotip
 [testing RPC]: https://codelabs.developers.google.com/grpc/getting-started-grpc-go#3
 [test double]: https://abseil.io/resources/swe-book/html/ch13.html
 [public API]: https://abseil.io/resources/swe-book/html/ch12.html#test_via_public_apis

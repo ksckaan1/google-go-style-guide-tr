@@ -2,7 +2,7 @@
 
 https://google.github.io/styleguide/go
 
-[Genel Bakış](index.md) | [Kılavuz](guide.md) | [Stil Kararları](decisions.md) |
+[Genel Bakış](README.md) | [Kılavuz](guide.md) | [Stil Kararları](decisions.md) |
 [En İyi Uygulamalar](best-practices.md)
 
 <!--

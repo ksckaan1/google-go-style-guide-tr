@@ -4,16 +4,16 @@
 
 guide
 
-[Genel Bakış](index.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
+[Genel Bakış](README.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
 [En İyi Uygulamalar](best-practices.md)
 
 <!--
 
 -->
 
-**Not:** Bu, Google'daki [Go Stili](index.md)'ni özetleyen belgeler dizisinin bir
-parçasıdır. Bu belge **[normatif](index.md#normative) ve
-[kanonik](index.md#canonical)**'dir. Daha fazla bilgi için [genel bakışa](index.md#about) bakınız.
+**Not:** Bu, Google'daki [Go Stili](README.md)'ni özetleyen belgeler dizisinin bir
+parçasıdır. Bu belge **[normatif](README.md#normative) ve
+[kanonik](README.md#canonical)**'dir. Daha fazla bilgi için [genel bakışa](README.md#about) bakınız.
 
 <a id="principles"></a>
 
