@@ -19,9 +19,9 @@ Go Stil Kılavuzu ve ilişik dokümanlar, okunabilir ve idiomatik Go kodu yazmak
 
 | Doküman                | Bağlantı                                              | Ana Kitle                | [Normatif] | [Kanonical] |
 | ---------------------- | ----------------------------------------------------- | ------------------------ | ---------- | ----------- |
-| **Stil Kılavuzu**      | https://google.github.io/styleguide/go/guide          | Herkes                   | Evet       | Evet        |
-| **Stil Kararları**     | https://google.github.io/styleguide/go/decisions      | Okunabilirlik Mentörleri | Evet       | Hayır       |
-| **En İyi Uygulamalar** | https://google.github.io/styleguide/go/best-practices | İlgilenen herkes         | Hayır      | Hayır       |
+| **Stil Kılavuzu**      | guide          | Herkes                   | Evet       | Evet        |
+| **Stil Kararları**     | decisions      | Okunabilirlik Mentörleri | Evet       | Hayır       |
+| **En İyi Uygulamalar** | best-practices | İlgilenen herkes         | Hayır      | Hayır       |
 
 [Normatif]: #normative
 [Kanonical]: #canonical
@@ -30,13 +30,13 @@ Go Stil Kılavuzu ve ilişik dokümanlar, okunabilir ve idiomatik Go kodu yazmak
 
 ### Dokümanlar
 
-1.  **[Stil Kılavuzu](https://google.github.io/styleguide/go/guide)**, Google'da Go stilinin temelini çizer. Bu doküman kesin niteliktedir ve Stil Kararları ile En İyi Uygulamalardaki önerilerin temelini oluşturur.
+1.  **[Stil Kılavuzu](guide)**, Google'da Go stilinin temelini çizer. Bu doküman kesin niteliktedir ve Stil Kararları ile En İyi Uygulamalardaki önerilerin temelini oluşturur.
 
-1.  **[Stil Kararları](https://google.github.io/styleguide/go/decisions)**, belirli stil noktalarına ilişkin kararları özetleyen ve gerektiğinde kararların arkasındaki mantığı tartışan daha ayrıntılı bir dokümandır.
+1.  **[Stil Kararları](decisions)**, belirli stil noktalarına ilişkin kararları özetleyen ve gerektiğinde kararların arkasındaki mantığı tartışan daha ayrıntılı bir dokümandır.
 
     Bu kararlar yeni veriler, yeni dil özellikleri, yeni kütüphaneler veya ortaya çıkan kalıplara bağlı olarak zaman zaman değişebilir, ancak Google'daki bireysel Go programcılarının bu dokümanla güncel kalması beklenmez.
 
-1.  **[En İyi Uygulamalar](https://google.github.io/styleguide/go/best-practices)**, zaman içinde ortaya çıkan ve yaygın sorunları çözen, iyi okunan ve bakım ihtiyaçlarına karşı dayanıklı olan bazı kalıpları belgeler.
+1.  **[En İyi Uygulamalar](best-practices)**, zaman içinde ortaya çıkan ve yaygın sorunları çözen, iyi okunan ve bakım ihtiyaçlarına karşı dayanıklı olan bazı kalıpları belgeler.
 
     Bu en iyi uygulamalar kanonical değildir, ancak Google'daki Go programcılarının kod tabanını tutarlı ve homojen kılmak için bunları mümkün olduğunca kullanmaları teşvik edilir.
 

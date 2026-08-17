@@ -2,7 +2,7 @@
 
 # Go Stili En İyi Uygulamalar
 
-https://google.github.io/styleguide/go/best-practices
+best-practices
 
 [Gözden geçirme](index) | [Kılavuz](guide) | [Kararlar](decisions) |
 [En iyi uygulamalar](best-practices)
@@ -257,7 +257,7 @@ Yukarıdaki yaklaşım gelenekseldir ve diğer mühendisler tarafından makul
 
 Ayrıca bakın:
 
-- [Go İpucu #42: Test İçin Stub Oluşturma](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go İpucu #42: Test İçin Stub Oluşturma](index#gotip)
 
 #### Çoklu test double davranışları
 
@@ -680,7 +680,7 @@ import (
 )
 ```
 
-[Paket isimleri](https://google.github.io/styleguide/go/decisions#package-names)
+[Paket isimleri](decisions#package-names)
 kılavuzuna uyun. Bütün kelimeleri tercih edin. Kısa isimler iyidir ancak
 belirsizlikten kaçının. Emin olmadığınızda, _go'ya kadar olan proto paket
 ismini pb ekiyle kullanın:
@@ -740,9 +740,9 @@ Ayrıca bakın:
 - [Go Blog'dan hatalar hakkında bir yazı](https://go.dev/blog/go1.13-errors)
 - [Paket `errors`](https://pkg.go.dev/errors)
 - [Paket `upspin.io/errors`](https://commandcenter.blogspot.com/2017/12/error-handling-in-upspin.html)
-- [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](https://google.github.io/styleguide/go/index.html#gotip)
-- [Goİpucu #48: Hata Beklenen Değerleri](https://google.github.io/styleguide/go/index.html#gotip)
-- [Goİpucu #13: Kontrol İçin Hataları Tasarlama](https://google.github.io/styleguide/go/index.html#gotip)
+- [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index#gotip)
+- [Goİpucu #48: Hata Beklenen Değerleri](index#gotip)
+- [Goİpucu #13: Kontrol İçin Hataları Tasarlama](index#gotip)
 
 ### Hata yapısı
 
@@ -814,7 +814,7 @@ func handlePet(...) {
 ```
 
 Hataları dize biçimlerine göre ayırt etmeye çalışmayın. (Daha fazla bilgi için
-[Go İpucu #13: Kontrol İçin Hataları Tasarlama](https://google.github.io/styleguide/go/index.html#gotip)
+[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index#gotip)
 adlı makaleye bakın.)
 
 ```go
@@ -836,7 +836,7 @@ detay dizesi içeren bir proje yapısı. [Paket `status`][status] yaygın bir
 kapsamalamadır; bu yaklaşımı seçerseniz (bunu yapmak zorunda değilsiniz),
 [kanonik kodları](decisions#canonical-codes) kullanın. Durum kodlarını
 kullanmanın doğru seçim olup olmadığını öğrenmek için
-[Go İpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](https://google.github.io/styleguide/go/index.html#gotip)'a
+[Go İpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index#gotip)'a
 bakın.
 
 [`os.PathError`]: https://pkg.go.dev/os#PathError
@@ -1007,7 +1007,7 @@ Fiilini kullanacaksanız, `%w`'yi hata dizgesinin sonuna yerleştirmeyi tercih
 edin.
 
 Hatalar `%w` fiili ile veya `Unwrap() error` arayüzünü uygulayan bir
-[yapılandırılmış hata](https://google.github.io/styleguide/go/index.html#gotip)
+[yapılandırılmış hata](index#gotip)
 içine yerleştirilerek sarılabilir (örn:
 [`fs.PathError`](https://pkg.go.dev/io/fs#PathError)).
 
@@ -1133,8 +1133,8 @@ Ayrıca bakınız:
 - [Go Tip #106: Hata İsimlendirme Sözleşmeleri]
 
 [commentary]: decisions#commentary
-[Go Tip #48: Error Sentinel Values]: https://google.github.io/styleguide/go/index.html#gotip
-[Go Tip #106: Error Naming Conventions]: https://google.github.io/styleguide/go/index.html#gotip
+[Go Tip #48: Error Sentinel Values]: index#gotip
+[Go Tip #106: Error Naming Conventions]: index#gotip
 
 <a id="error-logging"></a>
 
@@ -1172,7 +1172,7 @@ günlüklediğinize dikkat edin.
   etkili uyarılar oluşturacak şekilde ayarlanabilen izleme sistemlerimiz
   var. Bu, standart kütüphane [package `expvar`] ile benzer ancak aynı değildir.
 
-[iyi test başarısızlığı mesajları]: https://google.github.io/styleguide/go/decisions#useful-test-failures
+[iyi test başarısızlığı mesajları]: decisions#useful-test-failures
 [programı durdurmak]: #checks-and-panics
 [`rate.Sometimes`]: https://pkg.go.dev/golang.org/x/time/rate#Sometimes
 [PII]: https://en.wikipedia.org/wiki/Personal_data
@@ -1255,7 +1255,7 @@ kabulü, bunun tarihsel bir hata olduğudur. Diğer dillerdeki uygulama
 sunucularından sunucu günlüklerini örneklerseniz, ele alınmamış büyük istif
 izlerine rastlamak yaygındır. Sunucularınızda bu tuzaktan kaçının.
 
-[panik'e karşı karar]: https://google.github.io/styleguide/go/decisions#dont-panic
+[panik'e karşı karar]: decisions#dont-panic
 [`net/http` server]: https://pkg.go.dev/net/http#Server
 
 <a id="when-to-panic"></a>
@@ -1349,7 +1349,7 @@ Ayrıca bakınız:
 - [Defer, Panic ve Recover](https://go.dev/blog/defer-panic-and-recover)
 - [Go'da panic'lerin kullanımı ve yanlış kullanımı hakkında](https://eli.thegreenplace.net/2018/on-the-uses-and-misuses-of-panics-in-go/)
 
-[Go Tip #81: Avoiding Resource Leaks in API Design]: https://google.github.io/styleguide/go/index.html#gotip
+[Go Tip #81: Avoiding Resource Leaks in API Design]: index#gotip
 
 <a id="documentation"></a>
 
@@ -1421,8 +1421,8 @@ Ayrıca bakınız:
 - [GoTip #51: Yapılandırma Desenleri]
 
 [commentary]: decisions#commentary
-[GoTip #41: Identify Function Call Parameters]: https://google.github.io/styleguide/go/index.html#gotip
-[GoTip #51: Patterns for Configuration]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #41: Identify Function Call Parameters]: index#gotip
+[GoTip #51: Patterns for Configuration]: index#gotip
 
 <a id="documentation-conventions-contexts"></a>
 
@@ -1631,7 +1631,7 @@ Ayrıca bakınız:
 
 - [GoTip #110: Exit'i Defer ile Karıştırmayın]
 
-[GoTip #110: Don't Mix Exit With Defer]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #110: Don't Mix Exit With Defer]: index#gotip
 
 <a id="documentation-conventions-errors"></a>
 
@@ -1701,8 +1701,8 @@ eklemeler yapmasını önleyebilir.
 
 Ayrıca bakınız:
 
-- [Go Tip #106: Hata İsimlendirme Sözleşmeleri](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #89: Kanonik Durum Kodlarının Ne Zaman Hata Olarak Kullanılacağı](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go Tip #106: Hata İsimlendirme Sözleşmeleri](index#gotip)
+- [Go Tip #89: Kanonik Durum Kodlarının Ne Zaman Hata Olarak Kullanılacağı](index#gotip)
 
 <a id="documentation-preview"></a>
 
@@ -2021,7 +2021,7 @@ Boyut ipuçları ve önceden ayırma, **kodun ve entegrasyonlarının empirik an
 
 **Uyarı:** İhtiyacınız olandan daha fazla bellek ayırmak, fleet'te belleği boşa harcayabilir ve hatta performansı olumsuz etkileyebilir. Emin değilseniz, [GoTip #3: Benchmarking Go Code]'a bakın ve varsayılan olarak [sıfır başlatma](#vardeclzero) veya [birleşik literal bildirimi](#vardeclcomposite) kullanın.
 
-[GoTip #3: Benchmarking Go Code]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #3: Benchmarking Go Code]: index#gotip
 
 <a id="decl-chan"></a>
 
@@ -2073,7 +2073,7 @@ Bir fonksiyonun birçok girdiye ihtiyaç duyduğu durumlarda, bazı argümanlar 
 Aşağıdaki öneriler öncelikle dışa aktarılan API'ler için geçerlidir ve bunlar dışa aktarılmamış olanlardan daha yüksek bir standartla değerlendirilir. Bu teknikler sizin kullanım durumunuz için gereksiz olabilir. Kendoze güvenin ve [açıklık][clarity] ile [en az mekanizma][least mechanism] ilkelerini dengeleyin.
 
 Ayrıca bakın:
-[Go Tip #24: Use Case-Specific Constructions](https://google.github.io/styleguide/go/index.html#gotip)
+[Go Tip #24: Use Case-Specific Constructions](index#gotip)
 
 [option struct]: #option-structure
 [variadic options]: #variadic-options
@@ -2527,9 +2527,9 @@ func TestAcceptance(t *testing.T) {
 }
 ```
 
-[sentinels]: https://google.github.io/styleguide/go/index.html#gotip
-[custom types]: https://google.github.io/styleguide/go/index.html#gotip
-[aggregates errors]: https://google.github.io/styleguide/go/index.html#gotip
+[sentinels]: index#gotip
+[custom types]: index#gotip
+[aggregates errors]: index#gotip
 
 <a id="use-real-transports"></a>
 
@@ -2606,7 +2606,7 @@ func addGameAssets(t *testing.T, dir string) error {
 
 Hata mesajı, ne olduğunu açıklayan bir açıklama içermelidir. Bu önemlidir, çünkü özellikle yardımımda hata üreten adım sayısı arttıkça birçok kullanıcıya bir test API'si sağlıyor olabilirsiniz. Test başarısız olduğunda, kullanıcının nerede ve neden başarısız olduğunu bilmesi gerekir.
 
-**İpucu:** Go 1.14, testiniz tamamlandığında çalışan temizleme fonksiyonlarını kaydetmek için kullanılabilecek bir [`t.Cleanup`] fonksiyonu tanıttı. Fonksiyon aynı zamanda test yardımcılarıyla da çalışır. Test yardımcılarını basitleştirme rehberliği için [GoTip #4: Cleaning Up Your Tests](https://google.github.io/styleguide/go/index.html#gotip) sayfasına bakın.
+**İpucu:** Go 1.14, testiniz tamamlandığında çalışan temizleme fonksiyonlarını kaydetmek için kullanılabilecek bir [`t.Cleanup`] fonksiyonu tanıttı. Fonksiyon aynı zamanda test yardımcılarıyla da çalışır. Test yardımcılarını basitleştirme rehberliği için [GoTip #4: Cleaning Up Your Tests](index#gotip) sayfasına bakın.
 
 Aşağıdaki snippet, hayali bir `paint_test.go` dosyasında, `(*testing.T).Helper`'ın bir Go testinde hata raporlamayı nasıl etkilediğini göstermektedir:
 
@@ -3060,7 +3060,7 @@ str := b.String()
 ```
 
 **Not:** Daha fazla tartışma için
-[GoTip #29: Building Strings Efficiently](https://google.github.io/styleguide/go/index.html#gotip) adresine bakın.
+[GoTip #29: Building Strings Efficiently](index#gotip) adresine bakın.
 
 <a id="string-constants"></a>
 
@@ -3135,12 +3135,12 @@ alanlarına parametre olarak geçirmektir.
 
 Ayrıca bakın:
 
-- [Go Tip #5: Slimming Your Client Libraries](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #24: Use Case-Specific Constructions](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #40: Improving Time Testability with Function Parameters](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #41: Identify Function Call Parameters](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #44: Improving Time Testability with Struct Fields](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #80: Dependency Injection Principles](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go Tip #5: Slimming Your Client Libraries](index#gotip)
+- [Go Tip #24: Use Case-Specific Constructions](index#gotip)
+- [Go Tip #40: Improving Time Testability with Function Parameters](index#gotip)
+- [Go Tip #41: Identify Function Call Parameters](index#gotip)
+- [Go Tip #44: Improving Time Testability with Struct Fields](index#gotip)
+- [Go Tip #80: Dependency Injection Principles](index#gotip)
 
 Açık bağımlılık geçişini desteklemeyen API'ler, müşteri sayısı arttıkça
 kırılgan hale gelir:
@@ -3242,9 +3242,9 @@ init`](https://go.dev/ref/spec#Package_initialization) içinde, bayraklar
 
 Ayrıca bakın:
 
-- [Go Tip #36: Enclosing Package-Level State](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #71: Reducing Parallel Test Flakiness](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #80: Dependency Injection Principles](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go Tip #36: Enclosing Package-Level State](index#gotip)
+- [Go Tip #71: Reducing Parallel Test Flakiness](index#gotip)
+- [Go Tip #80: Dependency Injection Principles](index#gotip)
 - Hata Yönetimi:
   [Look Before You Leap](https://docs.python.org/3/glossary.html#term-LBYL)
   versus
@@ -3436,8 +3436,8 @@ izleyin:
 
 Ayrıca bakın:
 
-- [Go Tip #36: Enclosing Package-Level State](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #80: Dependency Injection Principles](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go Tip #36: Enclosing Package-Level State](index#gotip)
+- [Go Tip #80: Dependency Injection Principles](index#gotip)
 
 <a id="interfaces"></a>
 
@@ -3765,8 +3765,8 @@ Arayüz döndürmenin idiomatik seçim olduğu birkaç yaygın senaryo vardır:
     paketler, kendi başlarına ayakta duramayan çok sayıda çok küçük paketten
     genellikle tercih edilir.
 
-[GoTip #78: Minimal Viable Interfaces]: https://google.github.io/styleguide/go/index.html#gotip
-[GoTip #49: Accept Interfaces, Return Concrete Types]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #78: Minimal Viable Interfaces]: index#gotip
+[GoTip #49: Accept Interfaces, Return Concrete Types]: index#gotip
 [testing RPC]: https://codelabs.developers.google.com/grpc/getting-started-grpc-go#3
 [test double]: https://abseil.io/resources/swe-book/html/ch13.html
 [public API]: https://abseil.io/resources/swe-book/html/ch12.html#test_via_public_apis

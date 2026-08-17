@@ -2,7 +2,7 @@
 
 # Go Stil Kılavuzu
 
-https://google.github.io/styleguide/go/guide
+guide
 
 [Genel Bakış](index) | [Kılavuz](guide) | [Kararlar](decisions) |
 [En İyi Uygulamalar](best-practices)

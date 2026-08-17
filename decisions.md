@@ -2,7 +2,7 @@
 
 # Go Stil Kararları
 
-https://google.github.io/styleguide/go/decisions
+decisions
 
 [Genel Bakış](index) | [Kılavuz](guide) | [Kararlar](decisions) |
 [En İyi Uygulamalar](best-practices)
@@ -118,8 +118,8 @@ paket kullanıcılarını [import sırasında yeniden adlandırmaya]
 cesaretlendirecek anlamsız paket isimlerinden kaçının:
 
 - [Sözde "yardımcı paketler" hakkındaki rehberlik](best-practices#util-packages)
-- [Go İpucu #97: İsimde Ne Var](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go İpucu #108: İyi Bir Paket Adının Gücü](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go İpucu #97: İsimde Ne Var](index#gotip)
+- [Go İpucu #108: İyi Bir Paket Adının Gücü](index#gotip)
 
 Bir import edilen paket yeniden adlandırıldığında (ör. `import foopb
 "path/to/foo_go_proto"`), paketin yerel adı yukarıdaki kurallara uymalıdır,
@@ -756,7 +756,7 @@ zorundaysa, isimlendirmek her zaman kabul edilebilir.
 > gerektirir.
 
 [Naked returns]: https://tour.golang.org/basics/7
-[GoTip #38: Functions as Named Types]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #38: Functions as Named Types]: index#gotip
 [`WithTimeout`]: https://pkg.go.dev/context#WithTimeout
 [`CancelFunc`]: https://pkg.go.dev/context#CancelFunc
 
@@ -1191,7 +1191,7 @@ Daha fazla bilgi için [Go Tip #1: Line of Sight] ve
 [TotT: Reduce Code Complexity by Reducing Nesting](https://testing.googleblog.com/2017/06/code-health-reduce-nesting-reduce.html)
 sayfalarına bakın.
 
-[Go Tip #1: Line of Sight]: https://google.github.io/styleguide/go/index.html#gotip
+[Go Tip #1: Line of Sight]: index#gotip
 
 <a id="language"></a>
 
@@ -2224,8 +2224,8 @@ kalıpları gibi belirli yapılar için.
 Interface'ler hakkında daha derin bir tartışma
 [En İyi Uygulamalar'ın interface'ler bölümünde](best-practices#interfaces) bulunabilir.
 
-[GoTip #78: Minimal Viable Interfaces]: https://google.github.io/styleguide/go/index.html#gotip
-[GoTip #49: Accept Interfaces, Return Concrete Types]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #78: Minimal Viable Interfaces]: index#gotip
+[GoTip #49: Accept Interfaces, Return Concrete Types]: index#gotip
 [testing RPC]: https://codelabs.developers.google.com/grpc/getting-started-grpc-go#3
 [test double]: https://abseil.io/resources/swe-book/html/ch13.html
 [public API]: https://abseil.io/resources/swe-book/html/ch12.html#test_via_public_apis
@@ -2575,8 +2575,8 @@ hakkında ek bir tartışma bulunmaktadır.
 Ayrıca bakın:
 
 - [Tip of the Week #45: Avoid Flags, Especially in Library Code][totw-45]
-- [Go Tip #10: Configuration Structs and Flags](https://google.github.io/styleguide/go/index.html#gotip)
-- [Go Tip #80: Dependency Injection Principles](https://google.github.io/styleguide/go/index.html#gotip)
+- [Go Tip #10: Configuration Structs and Flags](index#gotip)
+- [Go Tip #80: Dependency Injection Principles](index#gotip)
 
 [standard `flag` package]: https://golang.org/pkg/flag/
 [mixed caps]: guide#mixed-caps
@@ -3041,7 +3041,7 @@ if gotDecoded != input {
 
 Tablo tabanlı testler için, alt testleri kullanmayı ve `t.Error` ve `continue`
 yerine `t.Fatal` kullanmayı düşünün. Ayrıca
-[GoTip #25: Subtests: Making Your Tests Lean](https://google.github.io/styleguide/go/index.html#gotip)
+[GoTip #25: Subtests: Making Your Tests Lean](index#gotip)
 sayfasına bakın.
 
 **En iyi uygulama:** `t.Fatal`'ın ne zaman kullanılacağı hakkında daha fazla
@@ -3236,7 +3236,7 @@ Birim testlerde, yalnızca bir hata oluşup oluşmadığıyla ilgilenmek yaygın
 > ```
 
 Ayrıca bakın
-[Go İpucu #13: Kontrol İçin Hataları Tasarlama](https://google.github.io/styleguide/go/index.html#gotip).
+[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index#gotip).
 
 [tott-350]: https://testing.googleblog.com/2015/01/testing-on-toilet-change-detector-tests.html
 [`cmpopts.EquateErrors`]: https://pkg.go.dev/github.com/google/go-cmp/cmp/cmpopts#EquateErrors
@@ -3318,7 +3318,7 @@ t.Run("AM/PM confusion", ...)
 ```
 
 Ayrıca bakın
-[Go İpucu #117: Alt Test İsimleri](https://google.github.io/styleguide/go/index.html#gotip).
+[Go İpucu #117: Alt Test İsimleri](index#gotip).
 
 [Go test runner]: https://golang.org/cmd/go/#hdr-Testing_flags
 [identify the inputs]: #identify-the-input
@@ -3425,7 +3425,7 @@ Test kodunuzdaki daha karmaşık mantık, tablo testi girdi parametrelerine daya
 
 Tablo tabanlı testleri birden fazla test fonksiyonuyla birleştirebilirsiniz. Örneğin, bir fonksiyonun çıktısının beklenen çıktıyla tam olarak eşleştiğini ve fonksiyonun geçersiz bir girdi için nil olmayan bir hata döndürdüğünü test ederken, iki ayrı tablo tabanlı test fonksiyonu yazmak en iyi yaklaşımdır: biri normal hata dışı çıktılar için, diğeri hata çıktıları için.
 
-[GoTip #50: Disjoint Table Tests]: https://google.github.io/styleguide/go/index.html#gotip
+[GoTip #50: Disjoint Table Tests]: index#gotip
 
 <a id="table-tests-data-driven"></a>
 
@@ -3716,8 +3716,8 @@ Doğal olarak, stil kılavuzunda ele alınmayan bir konunun daha fazla tartışm
 ihtiyacı varsa, yazarlar sormaktan çekinmemelidir -- ister özel incelemede
 isterse dahili mesaj panolarında.
 
-[composite declaration best practices]: https://google.github.io/styleguide/go/best-practices#vardeclcomposite
-[initialization best practices]: https://google.github.io/styleguide/go/best-practices#vardeclinitialization
+[composite declaration best practices]: best-practices#vardeclcomposite
+[initialization best practices]: best-practices#vardeclinitialization
 
 <!--
 
