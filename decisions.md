@@ -4,17 +4,17 @@
 
 decisions
 
-[Genel Bakış](index) | [Kılavuz](guide) | [Kararlar](decisions) |
-[En İyi Uygulamalar](best-practices)
+[Genel Bakış](index.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
+[En İyi Uygulamalar](best-practices.md)
 
 <!--
 
 -->
 
-**Not:** Bu belge, Google'daki [Go Stili](index)'ni özetleyen belge serisinin bir
-parçasıdır. Bu belge **[normatif](index#normative) ancak
-[kanonik](index#canonical) değildir** ve [ana stil kılavuzu](guide)'na tabidir.
-Daha fazla bilgi için [genel bakış](index#about) sayfasına bakın.
+**Not:** Bu belge, Google'daki [Go Stili](index.md)'ni özetleyen belge serisinin bir
+parçasıdır. Bu belge **[normatif](index.md#normative) ancak
+[kanonik](index.md#canonical) değildir** ve [ana stil kılavuzu](guide.md)'na tabidir.
+Daha fazla bilgi için [genel bakış](index.md#about) sayfasına bakın.
 
 <a id="about"></a>
 
@@ -25,7 +25,7 @@ standart yönlendirmeler, açıklamalar ve örnekler sunmak amacıyla hazırlanm
 stil kararlarını içerir.
 
 Bu belge **kapsamlı değildir** ve zamanla büyüyecektir.
-[Ana stil kılavuzu](guide) ile burada verilen tavsiyeler çeliştiğinde,
+[Ana stil kılavuzu](guide.md) ile burada verilen tavsiyeler çeliştiğinde,
 **stil kılavuzu önceliklidir** ve bu belge buna göre güncellenmelidir.
 
 Tüm Go Stil belgeleri seti için
@@ -33,20 +33,20 @@ Tüm Go Stil belgeleri seti için
 
 Aşağıdaki bölümler stil kararlarından kılavuzun başka bir bölümüne taşınmıştır:
 
-- **MixedCaps**: [guide#mixed-caps](guide#mixed-caps) sayfasına bakın
+- **MixedCaps**: [guide#mixed-caps](guide.md#mixed-caps) sayfasına bakın
   <a id="mixed-caps"></a>
 
-- **Formatting**: [guide#formatting](guide#formatting) sayfasına bakın
+- **Formatting**: [guide#formatting](guide.md#formatting) sayfasına bakın
   <a id="formatting"></a>
 
-- **Line Length**: [guide#line-length](guide#line-length) sayfasına bakın
+- **Line Length**: [guide#line-length](guide.md#line-length) sayfasına bakın
   <a id="line-length"></a>
 
 <a id="naming"></a>
 
 ## Adlandırma
 
-Genel adlandırma yönergeleri için [ana stil kılavuzu](guide#naming)'ndaki
+Genel adlandırma yönergeleri için [ana stil kılavuzu](guide.md#naming)'ndaki
 adlandırma bölümüne bakın. Aşağıdaki bölümler adlandırma içindeki belirli
 alanlara ilişkin ek açıklamalar sunmaktadır.
 
@@ -111,15 +111,15 @@ paket isimleri alt çizgi içerebilir. Belirli örnekler:
 [`tabwriter`]: https://pkg.go.dev/text/tabwriter
 [`k8s`]: https://pkg.go.dev/k8s.io/client-go/kubernetes
 [`oauth2`]: https://pkg.go.dev/golang.org/x/oauth2
-[shadowed]: best-practices#shadowing
+[shadowed]: best-practices.md#shadowing
 
 `util`, `utility`, `common`, `helper`, `model`, `testhelper` gibi
 paket kullanıcılarını [import sırasında yeniden adlandırmaya]
 cesaretlendirecek anlamsız paket isimlerinden kaçının:
 
-- [Sözde "yardımcı paketler" hakkındaki rehberlik](best-practices#util-packages)
-- [Go İpucu #97: İsimde Ne Var](index#gotip)
-- [Go İpucu #108: İyi Bir Paket Adının Gücü](index#gotip)
+- [Sözde "yardımcı paketler" hakkındaki rehberlik](best-practices.md#util-packages)
+- [Go İpucu #97: İsimde Ne Var](index.md#gotip)
+- [Go İpucu #108: İyi Bir Paket Adının Gücü](index.md#gotip)
 
 Bir import edilen paket yeniden adlandırıldığında (ör. `import foopb
 "path/to/foo_go_proto"`), paketin yerel adı yukarıdaki kurallara uymalıdır,
@@ -174,7 +174,7 @@ const (
 )
 ```
 
-[MixedCaps]: guide#mixed-caps
+[MixedCaps]: guide.md#mixed-caps
 [Exported]: https://tour.golang.org/basics/3
 
 MixedCaps olmayan sabit isimleri veya `K` önekli sabitler kullanmayın.
@@ -284,8 +284,8 @@ kullanın.
 - Çok büyük kapsam, bir sayfadan fazla yayılan her şeydir (örneğin, 25 satırdan
   fazla).
 
-[clarity]: guide#clarity
-[concision]: guide#concision
+[clarity]: guide.md#clarity
+[concision]: guide.md#concision
 
 Küçük bir kapsamda tamamen net olabilecek bir isim (ör. `c` bir sayaç için),
 daha büyük bir kapsamda yetersiz kalabilir ve kodun ilerleyen kısımlarında
@@ -524,8 +524,8 @@ görmek için geliştirme ve kod incelemesi sırasında
 parçacıkları genellikle satır kaymasını önlemek için girintili olmalıdır.
 Girintilendirme dışında, süslemeden kaçınılmalıdır.
 
-[doc preview]: best-practices#documentation-preview
-[documentation conventions]: best-practices#documentation-conventions
+[doc preview]: best-practices.md#documentation-preview
+[documentation conventions]: best-practices.md#documentation-conventions
 
 <a id="comment-line-length"></a>
 
@@ -533,7 +533,7 @@ Girintilendirme dışında, süslemeden kaçınılmalıdır.
 
 Go'da yorumlar için sabit bir [satır uzunluğu] yoktur.
 
-[line length]: guide#line-length
+[line length]: guide.md#line-length
 
 Uzun yorum satırlarının, yorum satırlarını otomatik olarak sarmayan araçlarda
 kaynağın okunabilirliğini sağlamak için sarılması gerekir. Sarmanın nerede
@@ -541,7 +541,7 @@ yapılacağından emin değilseniz, 80 veya 100 sütun yaygın seçimlerdir. Anc
 katı bir sınır değildir; uzun düz metni bölmekten kaçınılması gereken
 durumlar vardır.
 Sarılmanın gerçekleşeceği belirli sütun genişliği için bir gereklilik yoktur.
-Bir dosya içinde [tutarlı](guide#consistency) olmaya çalışın.
+Bir dosya içinde [tutarlı](guide.md#consistency) olmaya çalışın.
 
 Yorumlama hakkında daha fazla bilgi için
 [Go Blog'undaki dokümantasyon yazısına][post from The Go Blog on documentation]
@@ -742,7 +742,7 @@ küçük bir bedeli karşılığında gereksiz API açıklığına yol açar.
 edilebilir. Orta düzey bir fonksiyon haline geldiğinde, döndürülen değerlerinizi
 açıkça belirtin. Benzer şekilde, yalnızca çıplak dönüşler kullanmanızı
 sağladığı için sonuç parametrelerini isimlendirmeyin.
-[Açıklık](guide#clarity), fonksiyonunuzda birkaç satır tasarruf etmekten her zaman
+[Açıklık](guide.md#clarity), fonksiyonunuzda birkaç satır tasarruf etmekten her zaman
 daha önemlidir.
 
 Bir sonuç parametresinin değeri ertelenmiş bir kapanışta değiştirilmek
@@ -756,7 +756,7 @@ zorundaysa, isimlendirmek her zaman kabul edilebilir.
 > gerektirir.
 
 [Naked returns]: https://tour.golang.org/basics/7
-[GoTip #38: Functions as Named Types]: index#gotip
+[GoTip #38: Functions as Named Types]: index.md#gotip
 [`WithTimeout`]: https://pkg.go.dev/context#WithTimeout
 [`CancelFunc`]: https://pkg.go.dev/context#CancelFunc
 
@@ -848,11 +848,11 @@ Paket import'ları normalde yeniden adlandırılmamalıdır, ancak
 yeniden adlandırılmaları gereken veya yeniden adlandırmanın
 okunabilirliği artırdığı durumlar vardır.
 
-İçe aktarılan paketlerin yerel adları [paket adlandırma](#package-names) kurallarına uymalıdır, alt çizgi ve büyük harf kullanımının yasaklanması da buna dahildir. Her zaman aynı içe aktarılmış paket için aynı yerel adı kullanarak [tutarlılığı](guide#consistency) korumaya çalışın.
+İçe aktarılan paketlerin yerel adları [paket adlandırma](#package-names) kurallarına uymalıdır, alt çizgi ve büyük harf kullanımının yasaklanması da buna dahildir. Her zaman aynı içe aktarılmış paket için aynı yerel adı kullanarak [tutarlılığı](guide.md#consistency) korumaya çalışın.
 
 Bir içe aktarılan paket, diğer içe aktarımlarla ad çakışmasını önlemek için _yeniden adlandırılmalıdır_. (Bunun bir sonucu olarak [iyi paket adları](#package-names) yeniden adlandırma gerektirmemelidir.) Ad çakışması durumunda, en yerel veya projeye özel içe aktarımı yeniden adlandırmayı tercih edin.
 
-Oluşturulan protocol buffer paketleri, adlarından alt çizgileri kaldırmak için yeniden adlandırılmalıdır ve yerel adlarının `pb` son ekine sahip olması zorundadır. Daha fazla bilgi için [proto ve stub en iyi uygulamalarına](best-practices#import-protos) bakın.
+Oluşturulan protocol buffer paketleri, adlarından alt çizgileri kaldırmak için yeniden adlandırılmalıdır ve yerel adlarının `pb` son ekine sahip olması zorundadır. Daha fazla bilgi için [proto ve stub en iyi uygulamalarına](best-practices.md#import-protos) bakın.
 
 ```go
 // İyi:
@@ -1191,7 +1191,7 @@ Daha fazla bilgi için [Go Tip #1: Line of Sight] ve
 [TotT: Reduce Code Complexity by Reducing Nesting](https://testing.googleblog.com/2017/06/code-health-reduce-nesting-reduce.html)
 sayfalarına bakın.
 
-[Go Tip #1: Line of Sight]: index#gotip
+[Go Tip #1: Line of Sight]: index.md#gotip
 
 <a id="language"></a>
 
@@ -1655,7 +1655,7 @@ func (r *SomeType) SomeLongFunctionName(foo1, foo2, foo3 string,
 }
 ```
 
-See [best practices](best-practices#funcargs) for a few options for shortening
+See [best practices](best-practices.md#funcargs) for a few options for shortening
 the call sites of functions that would otherwise have many arguments.
 
 Lines can often be shortened by factoring out local variables.
@@ -1681,7 +1681,7 @@ bad := foo.Call(long, list, of, parameters,
 ```
 
 Avoid adding inline comments to specific function arguments where possible.
-Instead, use an [option struct](best-practices#option-structure) or add more
+Instead, use an [option struct](best-practices.md#option-structure) or add more
 detail to the function documentation.
 
 ```go
@@ -2056,16 +2056,16 @@ yerlerde veya bir hatanın [kontrol edilmesi](#handle-errors) gereken bir bağla
 (ör. birçok istek işleyicisinde) çağrılmamalıdır. Sabit girdiler için bu,
 testlerin `Must` argümanlarının düzgün biçimlendirilmiş olmasını kolayca
 sağlamasına izin verir ve sabit olmayan girdiler için testlerin hataların
-[düzgün ele alındığını veya iletildiğini](best-practices#error-handling)
+[düzgün ele alındığını veya iletildiğini](best-practices.md#error-handling)
 doğrulamasına olanak tanır.
 
 `Must` fonksiyonları bir testte kullanıldığında, genellikle
 [test yardımcısı olarak işaretlenmeli](#mark-test-helpers) ve hatada `t.Fatal`
 çağırmalıdır (bu konuda daha fazla değerlendirme için
-[test yardımcılarında hata ele alma](best-practices#test-helper-error-handling)
+[test yardımcılarında hata ele alma](best-practices.md#test-helper-error-handling)
 sayfasına bakın).
 
-[Olağanüstü hata ele alma](best-practices#error-handling) mümkün olduğunda
+[Olağanüstü hata ele alma](best-practices.md#error-handling) mümkün olduğunda
 (bazı yeniden düzenlemeler dahil) kullanılmamalıdır:
 
 ```go
@@ -2186,13 +2186,13 @@ Ayrıca bakın:
 
 <a id="TOC-Interfaces"></a>
 
-[Gerçek bir ihtiyaç](guide#simplicity) existene kadar interface oluşturmaktan
+[Gerçek bir ihtiyaç](guide.md#simplicity) existene kadar interface oluşturmaktan
 kaçının. "Servis" veya "depo" gibi soyut adlandırılmış kalıplar yerine gerekli
 davranışa odaklanın.
 
 - RPC istemcilerini soyutlama veya test amacıyla yeni manuel interface'ler
   içine sarmayın.
-  Bunun yerine [gerçek taşıyıcıları](best-practices#use-real-transports) kullanın
+  Bunun yerine [gerçek taşıyıcıları](best-practices.md#use-real-transports) kullanın
   ([test RPC'si][testing RPC]).
 
 - Arka kapılar tanımlamayın veya yalnızca test amacıyla bir interface'in
@@ -2222,10 +2222,10 @@ factory ve [strategy](https://en.wikipedia.org/wiki/Strategy_pattern)
 kalıpları gibi belirli yapılar için.
 
 Interface'ler hakkında daha derin bir tartışma
-[En İyi Uygulamalar'ın interface'ler bölümünde](best-practices#interfaces) bulunabilir.
+[En İyi Uygulamalar'ın interface'ler bölümünde](best-practices.md#interfaces) bulunabilir.
 
-[GoTip #78: Minimal Viable Interfaces]: index#gotip
-[GoTip #49: Accept Interfaces, Return Concrete Types]: index#gotip
+[GoTip #78: Minimal Viable Interfaces]: index.md#gotip
+[GoTip #49: Accept Interfaces, Return Concrete Types]: index.md#gotip
 [testing RPC]: https://codelabs.developers.google.com/grpc/getting-started-grpc-go#3
 [test double]: https://abseil.io/resources/swe-book/html/ch13.html
 [public API]: https://abseil.io/resources/swe-book/html/ch12.html#test_via_public_apis
@@ -2575,12 +2575,12 @@ hakkında ek bir tartışma bulunmaktadır.
 Ayrıca bakın:
 
 - [Tip of the Week #45: Avoid Flags, Especially in Library Code][totw-45]
-- [Go Tip #10: Configuration Structs and Flags](index#gotip)
-- [Go Tip #80: Dependency Injection Principles](index#gotip)
+- [Go Tip #10: Configuration Structs and Flags](index.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
 
 [standard `flag` package]: https://golang.org/pkg/flag/
-[mixed caps]: guide#mixed-caps
-[complex CLIs]: best-practices#complex-clis
+[mixed caps]: guide.md#mixed-caps
+[complex CLIs]: best-practices.md#complex-clis
 [totw-45]: https://abseil.io/tips/45
 
 <a id="logging"></a>
@@ -2603,10 +2603,10 @@ biçimlendirme içermeyen sürümü tercih edin.
 
 Ayrıca bakın:
 
-- [Hataları günlükleme](best-practices#error-logging) ve
-  [özel ayrıntı düzeyleri](best-practices#vlog) hakkında en iyi uygulamalar
+- [Hataları günlükleme](best-practices.md#error-logging) ve
+  [özel ayrıntı düzeyleri](best-practices.md#vlog) hakkında en iyi uygulamalar
 - Log paketini ne zaman ve nasıl
-  [programı durdurmak](best-practices#checks-and-panics) için kullanacağınız
+  [programı durdurmak](best-practices.md#checks-and-panics) için kullanacağınız
 
 [`log`]: https://pkg.go.dev/log
 [`log/slog`]: https://pkg.go.dev/log/slog
@@ -2799,7 +2799,7 @@ Assertion kütüphaneleri, bir test içinde doğrulama ve hata mesajı üretimin
 birleştirmeye çalışan kütüphanelerdir (ancak aynı tuzaklar diğer test
 yardımcıları için de geçerli olabilir). Test yardımcıları ile assertion
 kütüphaneleri arasındaki fark hakkında daha fazla bilgi için
-[en iyi uygulamalar](best-practices#test-functions) sayfasına bakın.
+[en iyi uygulamalar](best-practices.md#test-functions) sayfasına bakın.
 
 ```go
 // Kötü:
@@ -2884,7 +2884,7 @@ Ayrıca bakın:
 - [Eşitlik karşılaştırması ve farklar](#types-of-equality)
 - [Farkları yazdırma](#print-diffs)
 - Test yardımcıları ile assertion yardımcıları arasındaki fark hakkında daha fazla
-  bilgi için [en iyi uygulamalar](best-practices#test-functions) sayfasına bakın
+  bilgi için [en iyi uygulamalar](best-practices.md#test-functions) sayfasına bakın
 - [Go SSS]'de [test çerçeveleri] ve onların tercih edilmemesi hakkında bölüm
 
 [useful failure messages]: #useful-test-failures
@@ -3041,11 +3041,11 @@ if gotDecoded != input {
 
 Tablo tabanlı testler için, alt testleri kullanmayı ve `t.Error` ve `continue`
 yerine `t.Fatal` kullanmayı düşünün. Ayrıca
-[GoTip #25: Subtests: Making Your Tests Lean](index#gotip)
+[GoTip #25: Subtests: Making Your Tests Lean](index.md#gotip)
 sayfasına bakın.
 
 **En iyi uygulama:** `t.Fatal`'ın ne zaman kullanılacağı hakkında daha fazla
-tartışma için [en iyi uygulamalar](best-practices#t-fatal) sayfasına bakın.
+tartışma için [en iyi uygulamalar](best-practices.md#t-fatal) sayfasına bakın.
 
 <a id="types-of-equality"></a>
 
@@ -3218,13 +3218,13 @@ yazdırmalısınız.
 
 Bir birim testi dizgi karşılaştırmaları yaptığında veya belirli girdiler için belirli hata türlerinin döndürülüp döndürülmediğini kontrol etmek için düz bir `cmp` kullandığında, bu hata mesajları gelecekte yeniden ifade edilirse testlerinizin kırılgan hale gelebileceğini görebilirsiniz. Bunun birim testinizi bir değişiklik dedektörüne dönüştürme potansiyeli olduğundan (bkz. [TotT: Değişiklik Dedektörü Testleri Zararlı Olarak Düşünülür][tott-350]), fonksiyonunuzun hangi tür hata döndürdüğünü kontrol etmek için dizgi karşılaştırması kullanmayın. Ancak, test edilen paketten gelen hata mesajlarının belirli özellikleri karşıladığını kontrol etmek için dizgi karşılaştırmaları kullanmak mümkündür, örneğin parametre adını içerdiğini.
 
-Go'daki hata değerleri genellikle insan gözü için tasarlanmış bir bileşen ve anlamsal kontrol akışı için tasarlanmış bir bileşen içerir. Testler, güvenilir bir şekilde gözlemlenebilir anlamsal bilgiyi test etmeye çalışmalıdır, bunun yerine genellikle gelecekteki değişikliklere bağlı olan insan hata ayıklama bilgisini görüntülememelidir. Anlamsal anlama sahip hataların nasıl oluşturulacağına ilişkin yönerge için [hatalarla ilgili en iyi uygulamalara](best-practices#error-handling) bakın. Yeterli anlamsal bilgiye sahip bir hata kontrolünüz dışındaki bir bağımlılıktan geliyorsa, hata mesajını ayrıştırmaya güvenmek yerine, API'yi iyileştirmek için sahibine karşı bir hata raporu açmayı düşünün.
+Go'daki hata değerleri genellikle insan gözü için tasarlanmış bir bileşen ve anlamsal kontrol akışı için tasarlanmış bir bileşen içerir. Testler, güvenilir bir şekilde gözlemlenebilir anlamsal bilgiyi test etmeye çalışmalıdır, bunun yerine genellikle gelecekteki değişikliklere bağlı olan insan hata ayıklama bilgisini görüntülememelidir. Anlamsal anlama sahip hataların nasıl oluşturulacağına ilişkin yönerge için [hatalarla ilgili en iyi uygulamalara](best-practices.md#error-handling) bakın. Yeterli anlamsal bilgiye sahip bir hata kontrolünüz dışındaki bir bağımlılıktan geliyorsa, hata mesajını ayrıştırmaya güvenmek yerine, API'yi iyileştirmek için sahibine karşı bir hata raporu açmayı düşünün.
 
 Birim testlerde, yalnızca bir hata oluşup oluşmadığıyla ilgilenmek yaygındır. Öyleyse, bir hata beklediğinizde hatanın nil olup olmadığını test etmek yeterlidir. Hatayı anlamsal olarak başka bir hata ile eşleştirmek istiyorsanız, [`errors.Is`] veya [`cmpopts.EquateErrors`] ile `cmp` kullanmayı düşünün.
 
 > **Not:** Bir test [`cmpopts.EquateErrors`] kullanıyorsa ama tüm `wantErr`
 > değerleri ya `nil` ya da `cmpopts.AnyError` ise, `cmp` kullanmak
-> [gereksiz mekanizmadır](guide#least-mechanism). Want alanını `bool`
+> [gereksiz mekanizmadır](guide.md#least-mechanism). Want alanını `bool`
 > yaparak kodu basitleştirin. Ardından `!=` ile basit bir karşılaştırma kullanabilirsiniz.
 >
 > ```go
@@ -3236,7 +3236,7 @@ Birim testlerde, yalnızca bir hata oluşup oluşmadığıyla ilgilenmek yaygın
 > ```
 
 Ayrıca bakın
-[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index#gotip).
+[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index.md#gotip).
 
 [tott-350]: https://testing.googleblog.com/2015/01/testing-on-toilet-change-detector-tests.html
 [`cmpopts.EquateErrors`]: https://pkg.go.dev/github.com/google/go-cmp/cmp/cmpopts#EquateErrors
@@ -3318,7 +3318,7 @@ t.Run("AM/PM confusion", ...)
 ```
 
 Ayrıca bakın
-[Go İpucu #117: Alt Test İsimleri](index#gotip).
+[Go İpucu #117: Alt Test İsimleri](index.md#gotip).
 
 [Go test runner]: https://golang.org/cmd/go/#hdr-Testing_flags
 [identify the inputs]: #identify-the-input
@@ -3421,11 +3421,11 @@ func TestDivide(t *testing.T) {
 }
 ```
 
-Test kodunuzdaki daha karmaşık mantık, tablo testi girdi parametrelerine dayanan koşullu farklılıklara dayalı karmaşık hata kontrolü gibi, tablodaki her bir girişin girdilere dayalı özel mantığa sahip olduğunda [anlaşılması zor](guide#maintainability) olabilir. Test durumlarının farklı mantığa sahip ama aynı kuruluma sahip olması durumunda, tek bir test fonksiyonu içindeki bir [alt testler](#subtests) dizisi daha okunabilir olabilir. Bir test yardımcısı da test gövdesinin okunabilirliğini korumak için test kurulumunu basitleştirmek amacıyla faydalı olabilir.
+Test kodunuzdaki daha karmaşık mantık, tablo testi girdi parametrelerine dayanan koşullu farklılıklara dayalı karmaşık hata kontrolü gibi, tablodaki her bir girişin girdilere dayalı özel mantığa sahip olduğunda [anlaşılması zor](guide.md#maintainability) olabilir. Test durumlarının farklı mantığa sahip ama aynı kuruluma sahip olması durumunda, tek bir test fonksiyonu içindeki bir [alt testler](#subtests) dizisi daha okunabilir olabilir. Bir test yardımcısı da test gövdesinin okunabilirliğini korumak için test kurulumunu basitleştirmek amacıyla faydalı olabilir.
 
 Tablo tabanlı testleri birden fazla test fonksiyonuyla birleştirebilirsiniz. Örneğin, bir fonksiyonun çıktısının beklenen çıktıyla tam olarak eşleştiğini ve fonksiyonun geçersiz bir girdi için nil olmayan bir hata döndürdüğünü test ederken, iki ayrı tablo tabanlı test fonksiyonu yazmak en iyi yaklaşımdır: biri normal hata dışı çıktılar için, diğeri hata çıktıları için.
 
-[GoTip #50: Disjoint Table Tests]: index#gotip
+[GoTip #50: Disjoint Table Tests]: index.md#gotip
 
 <a id="table-tests-data-driven"></a>
 
@@ -3585,7 +3585,7 @@ func readFile(t *testing.T, filename string) string {
 
 Bu kalıbı, bir test hatasına ve ona yol açan koşullar arasındaki bağlantıyı gizlediğinde kullanmayın. Özellikle, [assertion kütüphaneleri](#assert) hakkındaki yönerge hala geçerlidir ve [`t.Helper`] bu tür kütüphaneleri uygulamak için kullanılmamalıdır.
 
-**İpucu:** Test yardımcıları ile assertion yardımcıları arasındaki ayrım hakkında daha fazla bilgi için [en iyi uygulamalara](best-practices#test-functions) bakın.
+**İpucu:** Test yardımcıları ile assertion yardımcıları arasındaki ayrım hakkında daha fazla bilgi için [en iyi uygulamalara](best-practices.md#test-functions) bakın.
 
 Yukarıdaki öneri `*testing.T` ile ilgili olsa da, benchmark ve fuzz yardımcıları için de çoğu öneri aynıdır.
 
@@ -3716,8 +3716,8 @@ Doğal olarak, stil kılavuzunda ele alınmayan bir konunun daha fazla tartışm
 ihtiyacı varsa, yazarlar sormaktan çekinmemelidir -- ister özel incelemede
 isterse dahili mesaj panolarında.
 
-[composite declaration best practices]: best-practices#vardeclcomposite
-[initialization best practices]: best-practices#vardeclinitialization
+[composite declaration best practices]: best-practices.md#vardeclcomposite
+[initialization best practices]: best-practices.md#vardeclinitialization
 
 <!--
 

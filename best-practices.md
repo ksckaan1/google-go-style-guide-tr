@@ -4,17 +4,17 @@
 
 best-practices
 
-[Gözden geçirme](index) | [Kılavuz](guide) | [Kararlar](decisions) |
-[En iyi uygulamalar](best-practices)
+[Gözden geçirme](index.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
+[En iyi uygulamalar](best-practices.md)
 
 <!--
 
 -->
 
-**Not:** Bu, Google'da [Go Stili](index)'ni özetleyen belge serisinin bir
-parçasıdır. Bu belge ne [normatif](index#normative) ne de
-[kanonik](index#canonical)dir ve [ana stil kılavuzu](guide)'na yardımcı bir
-belgedir. Daha fazla bilgi için [gözden geçirmeye](index#about) bakın.
+**Not:** Bu, Google'da [Go Stili](index.md)'ni özetleyen belge serisinin bir
+parçasıdır. Bu belge ne [normatif](index.md#normative) ne de
+[kanonik](index.md#canonical)dir ve [ana stil kılavuzu](guide.md)'na yardımcı bir
+belgedir. Daha fazla bilgi için [gözden geçirmeye](index.md#about) bakın.
 
 ## Hakkında
 
@@ -25,7 +25,7 @@ olduğunda, ne zaman uygulanacağı ve ne zaman uygulanmayacağına ilişkin kar
 ilişkin hususlar da dahil olmak üzere birden fazla alternatif yaklaşım ele
 alınmaktadır.
 
-Tüm Stil Kılavuzu belgeleri için [gözden geçirmeye](index#about) bakın.
+Tüm Stil Kılavuzu belgeleri için [gözden geçirmeye](index.md#about) bakın.
 
 ## İsimlendirme
 
@@ -34,7 +34,7 @@ Tüm Stil Kılavuzu belgeleri için [gözden geçirmeye](index#about) bakın.
 #### Tekrardan kaçının
 
 Bir fonksiyon veya metod için isim seçerken, ismin okunacağı bağlamı göz
-önünde bulundurun. Çağrı sitesinde aşırı [tekrar](decisions#repetition)'dan
+önünde bulundurun. Çağrı sitesinde aşırı [tekrar](decisions.md#repetition)'dan
 kaçınmak için aşağıdaki önerileri değerlendirin:
 
 - Aşağıdakiler genellikle fonksiyon ve metod isimlerinden çıkarılabilir:
@@ -43,7 +43,7 @@ kaçınmak için aşağıdaki önerileri değerlendirin:
   - Bir metodun alıcısının türü
   - Bir girdinin veya çıktının pointer olup olmadığı
 
-- Fonksiyonlar için [paket ismini](decisions#repetitive-with-package)
+- Fonksiyonlar için [paket ismini](decisions.md#repetitive-with-package)
   tekrarlamayın.
 
   ```go
@@ -117,7 +117,7 @@ Fonksiyon ve metod isimleri seçerken bazı diğer yaygın kurallar vardır:
   ```
 
   Bunun bir sonucu olarak, fonksiyon ve metod isimlerinin
-  [`Get` ön ekinden](decisions#getters) kaçınması gerekir.
+  [`Get` ön ekinden](decisions.md#getters) kaçınması gerekir.
 
   ```go
   // Kötü:
@@ -153,13 +153,13 @@ Fonksiyon ve metod isimleri seçerken bazı diğer yaygın kurallar vardır:
 ### Test double ve yardımcı paketleri
 
 Test yardımcılarını ve özellikle [test double]'ları sağlayan paket ve türleri
-[isimlendirme](guide#naming) için uygulayabileceğiniz birkaç kural vardır.
+[isimlendirme](guide.md#naming) için uygulayabileceğiniz birkaç kural vardır.
 Bir test double bir stub, fake, mock veya spy olabilir.
 
 Bu örnekler çoğunlukla stub'lar kullanır. Kodunuz fake veya başka bir test
 double türü kullanıyorsa isimlerinizi buna göre güncelleyin.
 
-[naming]: guide#naming
+[naming]: guide.md#naming
 [test doubles]: https://abseil.io/resources/swe-book/html/ch13.html#basic_concepts
 
 Örneğin, aşağıdaki gibi production kodu sağlayan iyi odaklı bir paketiniz
@@ -257,7 +257,7 @@ Yukarıdaki yaklaşım gelenekseldir ve diğer mühendisler tarafından makul
 
 Ayrıca bakın:
 
-- [Go İpucu #42: Test İçin Stub Oluşturma](index#gotip)
+- [Go İpucu #42: Test İçin Stub Oluşturma](index.md#gotip)
 
 #### Çoklu test double davranışları
 
@@ -429,7 +429,7 @@ func abs(i int) int {
 }
 ```
 
-`:=` operatörü ile [kısa değişken tanımlamaları](guide#variable-declarations)
+`:=` operatörü ile [kısa değişken tanımlamaları](guide.md#variable-declarations)
 kullanırken, bazı durumlarda yeni bir değişken oluşturulmaz. Buna _ezme_
 diyebiliriz. Orijinal değere artık ihtiyaç duyulmadığında bunu yapmak
 sorunsuzdur.
@@ -498,13 +498,13 @@ Ezme olarak adlandırdığımız durumda, yeni bir değişken olmadığından,
 atanan tür orijinal değişkenin türüyle eşleşmelidir. Gölgeleme ile tamamen
 yeni bir varlık tanıtılır, dolayısıyla farklı bir türe sahip olabilir.
 Kasıtlı gölgeleme faydalı bir uygulama olabilir, ancak
-[açıklığı](guide#clarity) artırıyorsa her zaman yeni bir isim
+[açıklığı](guide.md#clarity) artırıyorsa her zaman yeni bir isim
 kullanabilirsiniz.
 
 Standart paketlerle aynı isimde değişkenleri çok küçük kapsamlar dışında
 kullanmak iyi bir fikir değildir, çünkü bu o paketten gelen serbest
 fonksiyonları ve değerleri erişilemez hale getirir. Tersine, paketiniz için
-bir isim seçerken, [içe aktarma yeniden adlandırma](decisions#import-renaming)
+bir isim seçerken, [içe aktarma yeniden adlandırma](decisions.md#import-renaming)
 gerektirme ihtimali olan veya müşteri tarafında iyi olan değişken isimlerinin
 gölgelenmesine yol açma ihtimali olan isimlerden kaçının.
 
@@ -523,11 +523,11 @@ func LongFunction() {
 Go paketlerinin `package` bildiriminde belirtilen, import yolundan ayrı bir
 ismi vardır. Paket ismi, yola kıyasla okunabilirlik açısından daha önemlidir.
 
-Go paket isimleri [paketin ne sağladığıyla](decisions#package-names) ilgili
+Go paket isimleri [paketin ne sağladığıyla](decisions.md#package-names) ilgili
 olmalıdır. Bir paketi yalnızca `util`, `helper`, `common` veya benzeri olarak
 adlandırmak genellikle kötü bir seçimdir (ismin _bir parçası_ olarak
 kullanılabilir). Bilgi verici olmayan isimler kodu okumayı zorlaştırır ve çok
-geniş kullanılırlarsa gereksiz [içe aktarma çakışmalarına](decisions#import-renaming) yol açabilir.
+geniş kullanılırlarsa gereksiz [içe aktarma çakışmalarına](decisions.md#import-renaming) yol açabilir.
 
 Bunun yerine, çağrı sitesinin nasıl görüneceğini düşünün.
 
@@ -596,7 +596,7 @@ olmalıdır ki bakımcı bir şeyin hangi dosyada olduğunu anlayabilsin ve dosy
 yeterince küçük olmalıdır ki orada bulmak kolay olsun. Standart kütüphane genellikle
 büyük paketleri birkaç kaynak dosyasına böler, ilgili kodu dosyaya göre
 gruplandırarak. [Paket `bytes`][package `bytes`] kaynak kodu iyi bir örnektir.
-Uzun paket belgelerine sahip paketler, yalnızca [paket belgesini](decisions#package-comments),
+Uzun paket belgelerine sahip paketler, yalnızca [paket belgesini](decisions.md#package-comments),
 bir paket bildirimini ve başka hiçbir şeyi içeren `doc.go` adlı bir dosya
 ayrımaya seçebilirler, ancak bu zorunlu değildir.
 
@@ -680,7 +680,7 @@ import (
 )
 ```
 
-[Paket isimleri](decisions#package-names)
+[Paket isimleri](decisions.md#package-names)
 kılavuzuna uyun. Bütün kelimeleri tercih edin. Kısa isimler iyidir ancak
 belirsizlikten kaçının. Emin olmadığınızda, _go'ya kadar olan proto paket
 ismini pb ekiyle kullanın:
@@ -740,9 +740,9 @@ Ayrıca bakın:
 - [Go Blog'dan hatalar hakkında bir yazı](https://go.dev/blog/go1.13-errors)
 - [Paket `errors`](https://pkg.go.dev/errors)
 - [Paket `upspin.io/errors`](https://commandcenter.blogspot.com/2017/12/error-handling-in-upspin.html)
-- [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index#gotip)
-- [Goİpucu #48: Hata Beklenen Değerleri](index#gotip)
-- [Goİpucu #13: Kontrol İçin Hataları Tasarlama](index#gotip)
+- [Goİpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index.md#gotip)
+- [Goİpucu #48: Hata Beklenen Değerleri](index.md#gotip)
+- [Goİpucu #13: Kontrol İçin Hataları Tasarlama](index.md#gotip)
 
 ### Hata yapısı
 
@@ -814,7 +814,7 @@ func handlePet(...) {
 ```
 
 Hataları dize biçimlerine göre ayırt etmeye çalışmayın. (Daha fazla bilgi için
-[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index#gotip)
+[Go İpucu #13: Kontrol İçin Hataları Tasarlama](index.md#gotip)
 adlı makaleye bakın.)
 
 ```go
@@ -834,9 +834,9 @@ yerleştirecek şekilde belgelenmiştir.
 Diğer hata yapıları uygun şekilde kullanılabilir, örneğin bir hata kodu ve
 detay dizesi içeren bir proje yapısı. [Paket `status`][status] yaygın bir
 kapsamalamadır; bu yaklaşımı seçerseniz (bunu yapmak zorunda değilsiniz),
-[kanonik kodları](decisions#canonical-codes) kullanın. Durum kodlarını
+[kanonik kodları](decisions.md#canonical-codes) kullanın. Durum kodlarını
 kullanmanın doğru seçim olup olmadığını öğrenmek için
-[Go İpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index#gotip)'a
+[Go İpucu #89: Kanonik Durum Kodlarını Hata Olarak Ne Zaman Kullanmalı](index.md#gotip)'a
 bakın.
 
 [`os.PathError`]: https://pkg.go.dev/os#PathError
@@ -1007,7 +1007,7 @@ Fiilini kullanacaksanız, `%w`'yi hata dizgesinin sonuna yerleştirmeyi tercih
 edin.
 
 Hatalar `%w` fiili ile veya `Unwrap() error` arayüzünü uygulayan bir
-[yapılandırılmış hata](index#gotip)
+[yapılandırılmış hata](index.md#gotip)
 içine yerleştirilerek sarılabilir (örn:
 [`fs.PathError`](https://pkg.go.dev/io/fs#PathError)).
 
@@ -1132,9 +1132,9 @@ Ayrıca bakınız:
 - [Go Tip #48: Hata Sentinel Değerleri]
 - [Go Tip #106: Hata İsimlendirme Sözleşmeleri]
 
-[commentary]: decisions#commentary
-[Go Tip #48: Error Sentinel Values]: index#gotip
-[Go Tip #106: Error Naming Conventions]: index#gotip
+[commentary]: decisions.md#commentary
+[Go Tip #48: Error Sentinel Values]: index.md#gotip
+[Go Tip #106: Error Naming Conventions]: index.md#gotip
 
 <a id="error-logging"></a>
 
@@ -1172,7 +1172,7 @@ günlüklediğinize dikkat edin.
   etkili uyarılar oluşturacak şekilde ayarlanabilen izleme sistemlerimiz
   var. Bu, standart kütüphane [package `expvar`] ile benzer ancak aynı değildir.
 
-[iyi test başarısızlığı mesajları]: decisions#useful-test-failures
+[iyi test başarısızlığı mesajları]: decisions.md#useful-test-failures
 [programı durdurmak]: #checks-and-panics
 [`rate.Sometimes`]: https://pkg.go.dev/golang.org/x/time/rate#Sometimes
 [PII]: https://en.wikipedia.org/wiki/Personal_data
@@ -1255,7 +1255,7 @@ kabulü, bunun tarihsel bir hata olduğudur. Diğer dillerdeki uygulama
 sunucularından sunucu günlüklerini örneklerseniz, ele alınmamış büyük istif
 izlerine rastlamak yaygındır. Sunucularınızda bu tuzaktan kaçının.
 
-[panik'e karşı karar]: decisions#dont-panic
+[panik'e karşı karar]: decisions.md#dont-panic
 [`net/http` server]: https://pkg.go.dev/net/http#Server
 
 <a id="when-to-panic"></a>
@@ -1272,7 +1272,7 @@ panic'ler, bir kitaba bağlı olmayan tutarlılık kontrolleri olarak görev yap
 paketine erişime sahip değildir.
 
 [`reflect`]: https://pkg.go.dev/reflect
-[kademe düzeyli `log`]: decisions#logging
+[kademe düzeyli `log`]: decisions.md#logging
 
 Paniklerin faydalı olabildiği, ancak nadir görülen bir diğer durum, her zaman
 çağrı zincirinde eşleşen bir recover'a sahip bir paketin iç uygulama ayrıntısı
@@ -1339,7 +1339,7 @@ func answer(i int) string {
 ```
 
 [Bayraklar ayrıştırılmadan önce `log` fonksiyonlarını çağırmayın.](https://pkg.go.dev/github.com/golang/glog#pkg-overview)
-Bir paket başlatma fonksiyonunda (`init` veya ["must" fonksiyonu](decisions#must-functions))
+Bir paket başlatma fonksiyonunda (`init` veya ["must" fonksiyonu](decisions.md#must-functions))
 ölmek zorundaysanız, fatal günlükleme çağrısı yerine panic kabul edilebilir.
 
 Ayrıca bakınız:
@@ -1349,7 +1349,7 @@ Ayrıca bakınız:
 - [Defer, Panic ve Recover](https://go.dev/blog/defer-panic-and-recover)
 - [Go'da panic'lerin kullanımı ve yanlış kullanımı hakkında](https://eli.thegreenplace.net/2018/on-the-uses-and-misuses-of-panics-in-go/)
 
-[Go Tip #81: Avoiding Resource Leaks in API Design]: index#gotip
+[Go Tip #81: Avoiding Resource Leaks in API Design]: index.md#gotip
 
 <a id="documentation"></a>
 
@@ -1366,7 +1366,7 @@ belgelenmemiş bir şeye göre daha kolay okunur ve yanlış kullanılmaya daha 
 yatkındır. Çalıştırılabilir [örnekler], Godoc'ta ve Code Search'te görünür ve
 kodunuzu nasıl kullanacağınızı açıklamanın mükemmel bir yoludur.
 
-[örnekler]: decisions#examples
+[örnekler]: decisions.md#examples
 
 <a id="documentation-conventions-params"></a>
 
@@ -1420,9 +1420,9 @@ Ayrıca bakınız:
 - [GoTip #41: Fonksiyon Çağrı Parametrelerini Belirleme]
 - [GoTip #51: Yapılandırma Desenleri]
 
-[commentary]: decisions#commentary
-[GoTip #41: Identify Function Call Parameters]: index#gotip
-[GoTip #51: Patterns for Configuration]: index#gotip
+[commentary]: decisions.md#commentary
+[GoTip #41: Identify Function Call Parameters]: index.md#gotip
+[GoTip #51: Patterns for Configuration]: index.md#gotip
 
 <a id="documentation-conventions-contexts"></a>
 
@@ -1631,7 +1631,7 @@ Ayrıca bakınız:
 
 - [GoTip #110: Exit'i Defer ile Karıştırmayın]
 
-[GoTip #110: Don't Mix Exit With Defer]: index#gotip
+[GoTip #110: Don't Mix Exit With Defer]: index.md#gotip
 
 <a id="documentation-conventions-errors"></a>
 
@@ -1681,7 +1681,7 @@ pointer değerine eşdeğer olmamasıdır.
 olarak yazılmıştır.
 
 Davranışın paketteki大多数 hatalar için geçerli olduğu durumlarda, genel hata
-sözleşmelerini [paketin dokümantasyonunda](decisions#package-comments)
+sözleşmelerini [paketin dokümantasyonunda](decisions.md#package-comments)
 belgeleyin:
 
 ```go
@@ -1701,8 +1701,8 @@ eklemeler yapmasını önleyebilir.
 
 Ayrıca bakınız:
 
-- [Go Tip #106: Hata İsimlendirme Sözleşmeleri](index#gotip)
-- [Go Tip #89: Kanonik Durum Kodlarının Ne Zaman Hata Olarak Kullanılacağı](index#gotip)
+- [Go Tip #106: Hata İsimlendirme Sözleşmeleri](index.md#gotip)
+- [Go Tip #89: Kanonik Durum Kodlarının Ne Zaman Hata Olarak Kullanılacağı](index.md#gotip)
 
 <a id="documentation-preview"></a>
 
@@ -1800,7 +1800,7 @@ işlendiğini doğrulamaya yardımcı olur.
 
 [Godoc]: https://pkg.go.dev/
 [dokümantasyonu biçimlendirmek]: https://go.dev/doc/comment
-[çalıştırılabilir örnekler]: decisions#examples
+[çalıştırılabilir örnekler]: decisions.md#examples
 
 <a id="signal-boost"></a>
 
@@ -1904,7 +1904,7 @@ msg := new(pb.Bar) // or "&pb.Bar{}"
 if err := proto.Unmarshal(data, msg); err != nil {
 ```
 
-Yapınızda [kopyalanmaması gereken](decisions#copying) bir kilit veya diğer
+Yapınızda [kopyalanmaması gereken](decisions.md#copying) bir kilit veya diğer
 alan varsa, sıfır değer başlatmasından yararlanmak için bunu değer türü
 yapabilirsiniz. Bu, barındıran türün artık değer yerine pointer ile
 geçirilmesi gerektiği anlamına gelir. Tür üzerindeki metotların pointer
@@ -2021,7 +2021,7 @@ Boyut ipuçları ve önceden ayırma, **kodun ve entegrasyonlarının empirik an
 
 **Uyarı:** İhtiyacınız olandan daha fazla bellek ayırmak, fleet'te belleği boşa harcayabilir ve hatta performansı olumsuz etkileyebilir. Emin değilseniz, [GoTip #3: Benchmarking Go Code]'a bakın ve varsayılan olarak [sıfır başlatma](#vardeclzero) veya [birleşik literal bildirimi](#vardeclcomposite) kullanın.
 
-[GoTip #3: Benchmarking Go Code]: index#gotip
+[GoTip #3: Benchmarking Go Code]: index.md#gotip
 
 <a id="decl-chan"></a>
 
@@ -2073,12 +2073,12 @@ Bir fonksiyonun birçok girdiye ihtiyaç duyduğu durumlarda, bazı argümanlar 
 Aşağıdaki öneriler öncelikle dışa aktarılan API'ler için geçerlidir ve bunlar dışa aktarılmamış olanlardan daha yüksek bir standartla değerlendirilir. Bu teknikler sizin kullanım durumunuz için gereksiz olabilir. Kendoze güvenin ve [açıklık][clarity] ile [en az mekanizma][least mechanism] ilkelerini dengeleyin.
 
 Ayrıca bakın:
-[Go Tip #24: Use Case-Specific Constructions](index#gotip)
+[Go Tip #24: Use Case-Specific Constructions](index.md#gotip)
 
 [option struct]: #option-structure
 [variadic options]: #variadic-options
-[clarity]: guide#clarity
-[least mechanism]: guide#least-mechanism
+[clarity]: guide.md#clarity
+[least mechanism]: guide.md#least-mechanism
 
 <a id="option-structure"></a>
 
@@ -2330,10 +2330,10 @@ Go, "test yardımcıları" ile "doğrulama yardımcıları" arasında ayrım yap
 
 Bir testin amacı, test edilen kodun geçme/başarısız olma koşullarını bildirmektir. Testi başarısız bırakmanın ideal yeri, `Test` fonksiyonunun kendisidir, çünkü bu, [hata mesajlarının][failure messages] ve test mantığının net olmasını sağlar.
 
-[mark them as a test helper]: decisions#mark-test-helpers
+[mark them as a test helper]: decisions.md#mark-test-helpers
 [error handling in test helpers]: #test-helper-error-handling
-[not considered idiomatic]: decisions#assert
-[failure messages]: decisions#useful-test-failures
+[not considered idiomatic]: decisions.md#assert
+[failure messages]: decisions.md#useful-test-failures
 
 Test kodunuz büyüdükçe, bazı işlevselliği ayrı fonksiyonlara ayırmanız gerekebilir. Standart yazılım mühendisliği hususları hâlâ geçerlidir, çünkü _test kodu yine koddur_. İşlevsellik test çerçeveyle etkileşime girmiyorsa, tüm olağan kurallar geçerlidir. Ancak ortak kod çerçeveyle etkileşime girdiğinde, bilgilendirici olmayan hata mesajlarına ve sürdürülebilir olmayan testlere yol açabilecek yaygın tuzaklardan kaçınmak için dikkatli olunmalıdır.
 
@@ -2394,10 +2394,10 @@ func FuzzFencepost(f *testing.F) {
 
 **Not:** Test yardımcıları ile düz kitaplık kodu arasında bir benzerlik vardır. Kitaplık kodu nadir durumlar dışında [panic yapmamalıdır][not panic]; testten çağrılan kod, [devam etmenin bir anlamı olmadığında][no point in proceeding] dışında testi durdurmamalıdır.
 
-[table-driven test]: decisions#table-driven-tests
-[useful test failures]: decisions#useful-test-failures
+[table-driven test]: decisions.md#table-driven-tests
+[useful test failures]: decisions.md#useful-test-failures
 [package `cmp`]: https://pkg.go.dev/github.com/google/go-cmp/cmp
-[not panic]: decisions#dont-panic
+[not panic]: decisions.md#dont-panic
 [no point in proceeding]: #t-fatal
 
 <a id="test-validation-apis"></a>
@@ -2527,9 +2527,9 @@ func TestAcceptance(t *testing.T) {
 }
 ```
 
-[sentinels]: index#gotip
-[custom types]: index#gotip
-[aggregates errors]: index#gotip
+[sentinels]: index.md#gotip
+[custom types]: index.md#gotip
+[aggregates errors]: index.md#gotip
 
 <a id="use-real-transports"></a>
 
@@ -2552,7 +2552,7 @@ Müşteri davranışını doğru bir şekilde taklit etmenin karmaşıklığı n
 
 ### `t.Error` ile `t.Fatal`
 
-[decisions](decisions#keep-going) bölümünde tartışıldığı gibi, testler genellikle karşılaşılan ilk sorunda durmamalıdır.
+[decisions](decisions.md#keep-going) bölümünde tartışıldığı gibi, testler genellikle karşılaşılan ilk sorunda durmamalıdır.
 
 Ancak, bazı durumlar testin devam etmemesini gerektirir. `t.Fatal` çağırmak, bazı test kurulum parçaları başarısız olduğunda, özellikle [test kurulum yardımcılarında][test setup helpers], geri kalan testi çalıştırmanızı engellediğinde uygundur. Tablo sürüklü bir testte, `t.Fatal`, test döngüsünden önce tüm test fonksiyonunu kuran hatalar için uygundur. Tek bir test tablosu girişini etkileyen ve o girdiyle devam etmeyi imkansız kılan hatalar şu şekilde raporlanmalıdır:
 
@@ -2569,7 +2569,7 @@ Ancak, bazı durumlar testin devam etmemesini gerektirir. `t.Fatal` çağırmak,
 
 **Not:** Bu bölüm, Go'nun terim olarak kullandığı anlamda [test yardımcılarını][test helpers] tartışmaktadır: test kurulumu ve temizliği yapan fonksiyonlar, yaygın doğrulama kolaylıkları değil. Daha fazla tartışma için [test fonksiyonları](#test-functions) bölümüne bakın.
 
-[test helpers]: decisions#mark-test-helpers
+[test helpers]: decisions.md#mark-test-helpers
 
 Test yardımcılarının gerçekleştirdiği işlemler zaman zaman başarısız olabilir. Örneğin, dosyalarla bir dizin kurmak G/Ç içerir ve bu başarısız olabilir. Test yardımcıları başarısız olduğunda, başarısızlıkları genellikle testin devam edemeyeceğini gösterir, çünkü bir kurulum ön koşulu başarısız olmuştur. Bu gerçekleştiğinde, yardımımda `Fatal` fonksiyonlarından birini çağırmayı tercih edin:
 
@@ -2606,7 +2606,7 @@ func addGameAssets(t *testing.T, dir string) error {
 
 Hata mesajı, ne olduğunu açıklayan bir açıklama içermelidir. Bu önemlidir, çünkü özellikle yardımımda hata üreten adım sayısı arttıkça birçok kullanıcıya bir test API'si sağlıyor olabilirsiniz. Test başarısız olduğunda, kullanıcının nerede ve neden başarısız olduğunu bilmesi gerekir.
 
-**İpucu:** Go 1.14, testiniz tamamlandığında çalışan temizleme fonksiyonlarını kaydetmek için kullanılabilecek bir [`t.Cleanup`] fonksiyonu tanıttı. Fonksiyon aynı zamanda test yardımcılarıyla da çalışır. Test yardımcılarını basitleştirme rehberliği için [GoTip #4: Cleaning Up Your Tests](index#gotip) sayfasına bakın.
+**İpucu:** Go 1.14, testiniz tamamlandığında çalışan temizleme fonksiyonlarını kaydetmek için kullanılabilecek bir [`t.Cleanup`] fonksiyonu tanıttı. Fonksiyon aynı zamanda test yardımcılarıyla da çalışır. Test yardımcılarını basitleştirme rehberliği için [GoTip #4: Cleaning Up Your Tests](index.md#gotip) sayfasına bakın.
 
 Aşağıdaki snippet, hayali bir `paint_test.go` dosyasında, `(*testing.T).Helper`'ın bir Go testinde hata raporlamayı nasıl etkilediğini göstermektedir:
 
@@ -3060,7 +3060,7 @@ str := b.String()
 ```
 
 **Not:** Daha fazla tartışma için
-[GoTip #29: Building Strings Efficiently](index#gotip) adresine bakın.
+[GoTip #29: Building Strings Efficiently](index.md#gotip) adresine bakın.
 
 <a id="string-constants"></a>
 
@@ -3135,12 +3135,12 @@ alanlarına parametre olarak geçirmektir.
 
 Ayrıca bakın:
 
-- [Go Tip #5: Slimming Your Client Libraries](index#gotip)
-- [Go Tip #24: Use Case-Specific Constructions](index#gotip)
-- [Go Tip #40: Improving Time Testability with Function Parameters](index#gotip)
-- [Go Tip #41: Identify Function Call Parameters](index#gotip)
-- [Go Tip #44: Improving Time Testability with Struct Fields](index#gotip)
-- [Go Tip #80: Dependency Injection Principles](index#gotip)
+- [Go Tip #5: Slimming Your Client Libraries](index.md#gotip)
+- [Go Tip #24: Use Case-Specific Constructions](index.md#gotip)
+- [Go Tip #40: Improving Time Testability with Function Parameters](index.md#gotip)
+- [Go Tip #41: Identify Function Call Parameters](index.md#gotip)
+- [Go Tip #44: Improving Time Testability with Struct Fields](index.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
 
 Açık bağımlılık geçişini desteklemeyen API'ler, müşteri sayısı arttıkça
 kırılgan hale gelir:
@@ -3219,9 +3219,9 @@ sorunlar yaratır:
 - Birden fazla müşteri aynı isimle bir `Plugin`'i `Register` ederse ne olur?
   Hangisi kazanır, varsa?
 
-  Hatalar nasıl [ele alınmalı](decisions#handle-errors)? Kod panik yaparsa
+  Hatalar nasıl [ele alınmalı](decisions.md#handle-errors)? Kod panik yaparsa
   veya `log.Fatal` çağırırsa, bu her zaman [API'nin çağrıldığı her yer için
-  uygun olur mu](decisions#dont-panic)?
+  uygun olur mu](decisions.md#dont-panic)?
   Müşteri bunu yapmadan önce kötü bir şey yapmadığını doğrulayabilir mi?
 
 - Programın başlatma aşamalarının veya ömrünün belirli aşamaları var mı, bu
@@ -3233,7 +3233,7 @@ init`](https://go.dev/ref/spec#Package_initialization) içinde, bayraklar
   fonksiyonun çağrıldığı aşama hata yönetimini etkiler. Bir API yazarı, API'nin
   _yalnızca_ program başlatma sırasında çağrıldığını varsayarsa, bu varsayım
   yazarı, API'yi `Must` benzeri bir fonksiyon olarak modelleyerek
-  programı [durdurmaya](best-practices#program-init) yöneltme eğiliminde
+  programı [durdurmaya](best-practices.md#program-init) yöneltme eğiliminde
   olabilir. Durma, herhangi bir aşamada kullanılabilen genel amaçlı kütüphane
   fonksiyonları için uygun değildir.
 
@@ -3242,9 +3242,9 @@ init`](https://go.dev/ref/spec#Package_initialization) içinde, bayraklar
 
 Ayrıca bakın:
 
-- [Go Tip #36: Enclosing Package-Level State](index#gotip)
-- [Go Tip #71: Reducing Parallel Test Flakiness](index#gotip)
-- [Go Tip #80: Dependency Injection Principles](index#gotip)
+- [Go Tip #36: Enclosing Package-Level State](index.md#gotip)
+- [Go Tip #71: Reducing Parallel Test Flakiness](index.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
 - Hata Yönetimi:
   [Look Before You Leap](https://docs.python.org/3/glossary.html#term-LBYL)
   versus
@@ -3319,7 +3319,7 @@ En yaygın sorunlu API biçimlerinden bazıları aşağıda listelenmiştir:
 > aslında bazı Go standart kütüphaneleri küresel değerler üzerinden yapılandırmaya
 > izin verir. Yine de eski API'nin bu rehberi ihlali, deseni
 > sürdürmek için
-> **[emsal olarak kullanılmamalıdır](guide#local-consistency)**.
+> **[emsal olarak kullanılmamalıdır](guide.md#local-consistency)**.
 >
 > Bugün düzgün API tasarımına yatırım yapmak, yeniden tasarlamak için daha sonra
 > ödeme yapmaktan daha iyidir.
@@ -3436,8 +3436,8 @@ izleyin:
 
 Ayrıca bakın:
 
-- [Go Tip #36: Enclosing Package-Level State](index#gotip)
-- [Go Tip #80: Dependency Injection Principles](index#gotip)
+- [Go Tip #36: Enclosing Package-Level State](index.md#gotip)
+- [Go Tip #80: Dependency Injection Principles](index.md#gotip)
 
 <a id="interfaces"></a>
 
@@ -3449,7 +3449,7 @@ yapısal bir araçtır, layubiliyet (declarative) bir araç değil. Aşağıdaki
 rehber, Go'da arayüzleri kod tabanınızı aşırı mühendislik yapmadan nasıl
 tasarlayacağınız ve döndüreceğiniz konusunda en iyi uygulamaları sunmaktadır.
 
-Özet için [Kararların arayüzler hakkındaki bölümüne](decisions#interfaces) bakın.
+Özet için [Kararların arayüzler hakkındaki bölümüne](decisions.md#interfaces) bakın.
 
 <a id="avoiding-circular-dependencies"></a>
 
@@ -3457,7 +3457,7 @@ tasarlayacağınız ve döndüreceğiniz konusunda en iyi uygulamaları sunmakta
 
 ### Gereksiz arayüzlerden kaçının
 
-En yaygın hata, bir [gerçek ihtiyaç](guide#simplicity) oluşmadan önce bir
+En yaygın hata, bir [gerçek ihtiyaç](guide.md#simplicity) oluşmadan önce bir
 arayüz oluşturmaktır.
 
 1.  **Kavramı anahtar kelimeyle karıştırmayın:** Bir "servis" veya
@@ -3482,7 +3482,7 @@ arayüz oluşturmaktır.
     zorlarsınız.
 
     Bir test double için bir arayüzü, yalnızca ikame etmeyi destekleme konusunda
-    [önemli bir ihtiyaç](guide#least-mechanism) duyduğunuzda dışa aktarın.
+    [önemli bir ihtiyaç](guide.md#least-mechanism) duyduğunuzda dışa aktarın.
 
 Bir arayüz oluşturmanın mantıklı olduğu durumlar:
 
@@ -3590,7 +3590,7 @@ Arayüz döndürmenin idiomatik seçim olduğu birkaç yaygın senaryo vardır:
     arayüzü döndürmek, varsayılan API yüzeyini sınırlamak ve çağıranın
     davranışını yönlendirmek için güçlü bir araçtır. En yaygın örnek `error`
     arayüzüdür;
-    [neredeyse hiç somut bir hata türü döndürmezsiniz](decisions#errors)
+    [neredeyse hiç somut bir hata türü döndürmezsiniz](decisions.md#errors)
     (`*MyCustomError` gibi).
 
     `io.Reader`'ı uygulayan ancak dahili bucket yönetimi için bir `Refill`
@@ -3765,8 +3765,8 @@ Arayüz döndürmenin idiomatik seçim olduğu birkaç yaygın senaryo vardır:
     paketler, kendi başlarına ayakta duramayan çok sayıda çok küçük paketten
     genellikle tercih edilir.
 
-[GoTip #78: Minimal Viable Interfaces]: index#gotip
-[GoTip #49: Accept Interfaces, Return Concrete Types]: index#gotip
+[GoTip #78: Minimal Viable Interfaces]: index.md#gotip
+[GoTip #49: Accept Interfaces, Return Concrete Types]: index.md#gotip
 [testing RPC]: https://codelabs.developers.google.com/grpc/getting-started-grpc-go#3
 [test double]: https://abseil.io/resources/swe-book/html/ch13.html
 [public API]: https://abseil.io/resources/swe-book/html/ch12.html#test_via_public_apis

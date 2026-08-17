@@ -4,16 +4,16 @@
 
 guide
 
-[Genel Bakış](index) | [Kılavuz](guide) | [Kararlar](decisions) |
-[En İyi Uygulamalar](best-practices)
+[Genel Bakış](index.md) | [Kılavuz](guide.md) | [Kararlar](decisions.md) |
+[En İyi Uygulamalar](best-practices.md)
 
 <!--
 
 -->
 
-**Not:** Bu, Google'daki [Go Stili](index)'ni özetleyen belgeler dizisinin bir
-parçasıdır. Bu belge **[normatif](index#normative) ve
-[kanonik](index#canonical)**'dir. Daha fazla bilgi için [genel bakışa](index#about) bakınız.
+**Not:** Bu, Google'daki [Go Stili](index.md)'ni özetleyen belgeler dizisinin bir
+parçasıdır. Bu belge **[normatif](index.md#normative) ve
+[kanonik](index.md#canonical)**'dir. Daha fazla bilgi için [genel bakışa](index.md#about) bakınız.
 
 <a id="principles"></a>
 
@@ -109,7 +109,7 @@ arasında:
   içindeki sürdürücü yorumları.
 - Aynı paketteki [iyi çalıştırılabilir örnekler](https://cs.opensource.google/go/go/+/refs/tags/go1.19.2:src/sort/example_search_test.go),
   hem kullanıcılara (bunlar [godoc'ta görünür](https://pkg.go.dev/sort#pkg-examples))
-  hem de sürdürücülere (bunlar [testlerin parçası olarak çalışır](decisions#examples))
+  hem de sürdürücülere (bunlar [testlerin parçası olarak çalışır](decisions.md#examples))
   fayda sağlar.
 - [`strings.Cut`](https://pkg.go.dev/strings#Cut) sadece dört satır koddan
   oluşur, ama [çağrı sitelerinin netliğini ve doğruluğunu artırır](https://github.com/golang/go/issues/46336).
@@ -245,7 +245,7 @@ if err := doSomething(); err == nil { // hata YOKSA
 
 [Table-driven testing]: https://go.dev/wiki/TableDrivenTests
 [error handling]: https://go.dev/blog/errors-are-values
-["boosting"]: best-practices#signal-boost
+["boosting"]: best-practices.md#signal-boost
 
 <a id="maintainability"></a>
 
@@ -412,7 +412,7 @@ olabildiğince kısaysa, satırın uzun kalmasına izin verilmelidir.
 
 Satırı bölmeyin:
 
-- Bir [girinti değişikliğinden](decisions#indentation-confusion) önce
+- Bir [girinti değişikliğinden](decisions.md#indentation-confusion) önce
   (örneğin, fonksiyon bildirimi, koşul)
 - Uzun bir dizeyi (örneğin bir URL) daha kısa birkaç satıra sığdırmak için
 
@@ -423,11 +423,11 @@ Satırı bölmeyin:
 İsimlendirme, bilimden ziyade bir sanattır. Go'da isimler birçok diğer dile
 göre biraz daha kısadır, ancak aynı [genel kurallar] geçerlidir. İsimler:
 
-- Kullanıldığında [tekrarlayan](decisions#repetition) hissettirmemelidir
+- Kullanıldığında [tekrarlayan](decisions.md#repetition) hissettirmemelidir
 - Bağlamı göz önünde bulundurmalıdır
 - Zaten açık olan kavramları tekrarlamamalıdır
 
-İsimlendirme hakkında daha spesifik yönergeleri [kararlar](decisions#naming)
+İsimlendirme hakkında daha spesifik yönergeleri [kararlar](decisions.md#naming)
 bölümünde bulabilirsiniz.
 
 [general guidelines]: https://testing.googleblog.com/2017/10/code-health-identifiernamingpostforworl.html

@@ -2,8 +2,8 @@
 
 https://google.github.io/styleguide/go
 
-[Genel Bakış](index) | [Kılavuz](guide) | [Stil Kararları](decisions) |
-[En İyi Uygulamalar](best-practices)
+[Genel Bakış](index.md) | [Kılavuz](guide.md) | [Stil Kararları](decisions.md) |
+[En İyi Uygulamalar](best-practices.md)
 
 <!--
 
@@ -30,13 +30,13 @@ Go Stil Kılavuzu ve ilişik dokümanlar, okunabilir ve idiomatik Go kodu yazmak
 
 ### Dokümanlar
 
-1.  **[Stil Kılavuzu](guide)**, Google'da Go stilinin temelini çizer. Bu doküman kesin niteliktedir ve Stil Kararları ile En İyi Uygulamalardaki önerilerin temelini oluşturur.
+1.  **[Stil Kılavuzu](guide.md)**, Google'da Go stilinin temelini çizer. Bu doküman kesin niteliktedir ve Stil Kararları ile En İyi Uygulamalardaki önerilerin temelini oluşturur.
 
-1.  **[Stil Kararları](decisions)**, belirli stil noktalarına ilişkin kararları özetleyen ve gerektiğinde kararların arkasındaki mantığı tartışan daha ayrıntılı bir dokümandır.
+1.  **[Stil Kararları](decisions.md)**, belirli stil noktalarına ilişkin kararları özetleyen ve gerektiğinde kararların arkasındaki mantığı tartışan daha ayrıntılı bir dokümandır.
 
     Bu kararlar yeni veriler, yeni dil özellikleri, yeni kütüphaneler veya ortaya çıkan kalıplara bağlı olarak zaman zaman değişebilir, ancak Google'daki bireysel Go programcılarının bu dokümanla güncel kalması beklenmez.
 
-1.  **[En İyi Uygulamalar](best-practices)**, zaman içinde ortaya çıkan ve yaygın sorunları çözen, iyi okunan ve bakım ihtiyaçlarına karşı dayanıklı olan bazı kalıpları belgeler.
+1.  **[En İyi Uygulamalar](best-practices.md)**, zaman içinde ortaya çıkan ve yaygın sorunları çözen, iyi okunan ve bakım ihtiyaçlarına karşı dayanıklı olan bazı kalıpları belgeler.
 
     Bu en iyi uygulamalar kanonical değildir, ancak Google'daki Go programcılarının kod tabanını tutarlı ve homojen kılmak için bunları mümkün olduğunca kullanmaları teşvik edilir.
 
@@ -56,7 +56,7 @@ Bu dokümanlar aşağıdakileri **amaçlamaz**:
 - Dil özelliklerinin ve stilin kullanımında iyi yargıya alternatif olmak
 - Stil farklılıklarından kurtulmak için yapılması gereken geniş çaplı değişiklikleri haklı çıkarmak
 
-Bir Go programcısından diğerine ve bir takımın kod tabanından diğerine her zaman farklılıklar olacaktır. Ancak, kod tabanımızın mümkün olduğunca tutarlı olması Google ve Alphabet'in en iyi çıkarınadır. (Tutarlılık hakkında daha fazla bilgi için [kılavuza](guide#consistency) bakın.) Bu amaçla, gerekli gördüğünüz şekilde stil iyileştirmeleri yapmaktan çekinmeyin, ancak her bulduğunuz Stil Kılavuzu ihlali üzerinde fazla durmanıza gerek yoktur. Özellikle, bu dokümanlar zaman içinde değişebilir ve bu, mevcut kod tabanlarında fazladan değişiklik yapmak için bir neden değildir; yeni kodu en son en iyi uygulamalara göre yazmanız ve yakındaki sorunları zaman içinde ele almanız yeterlidir.
+Bir Go programcısından diğerine ve bir takımın kod tabanından diğerine her zaman farklılıklar olacaktır. Ancak, kod tabanımızın mümkün olduğunca tutarlı olması Google ve Alphabet'in en iyi çıkarınadır. (Tutarlılık hakkında daha fazla bilgi için [kılavuza](guide.md#consistency) bakın.) Bu amaçla, gerekli gördüğünüz şekilde stil iyileştirmeleri yapmaktan çekinmeyin, ancak her bulduğunuz Stil Kılavuzu ihlali üzerinde fazla durmanıza gerek yoktur. Özellikle, bu dokümanlar zaman içinde değişebilir ve bu, mevcut kod tabanlarında fazladan değişiklik yapmak için bir neden değildir; yeni kodu en son en iyi uygulamalara göre yazmanız ve yakındaki sorunları zaman içinde ele almanız yeterlidir.
 
 Stil konularının doğası gereği kişisel olduğunu ve her zaman doğal ödünler olduğunu kabul etmek önemlidir. Bu dokümanlardaki rehberliğin çoğu öznel olmakla birlikte, `gofmt`'de olduğu gibi sağladıkları homojenliğin önemli bir değeri vardır. Bu nedenle, stil önerileri uygun tartışma olmadan değiştirilmeyecek ve Google'daki Go programcılarının katılmasalar bile stil kılavuzuna uymaları teşvik edilecektir.
 
